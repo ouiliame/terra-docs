@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Oracle · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Oracle module forms a consensus on the exchange rate of Luna with respect to various fiat currencies, in order to facilitate swaps amongst the stablecoins mirroring those currencies as well as ensuring their price-stability."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Oracle · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ouiliame.github.io/terra-docs/"/><meta property="og:description" content="The Oracle module forms a consensus on the exchange rate of Luna with respect to various fiat currencies, in order to facilitate swaps amongst the stablecoins mirroring those currencies as well as ensuring their price-stability."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/terra-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono&amp;display=swap"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/terra-docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/terra-docs/css/main.css"/><script src="/terra-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/terra-docs/"><img class="logo" src="/terra-docs/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/terra-docs/docs/dev-intro" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>TERRA CORE</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Overview<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-faq">Terra FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Terra Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-what-is-terra">What is Terra?</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-how-terra-works">How Terra Works</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">BASICS</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-accounts-wallets">Accounts &amp; Wallets</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-transaction">Transactions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">MINING &amp; CONSENSUS</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-dpos">Delegated Proof-of-Stake (DPoS)</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-luna-staking">Luna &amp; Staking</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-validators">Validators</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-price-oracle">Price Oracle</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">STABILITY</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-monetary-policy">Monetary Policy</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-subcurrencies">Subcurrencies</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-stabilization">Price Stabilization</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-miner-incentives">Miner Incentives</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ADOPTION</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-fiscal-policy">Fiscal Policy</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-governance">Governance</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-dapp-platform">Powering the Innovation of Money</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">TERRA VS. ...</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-comparison">Other Stablecoins</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Node Software<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-users">For non-validating users</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-light-client">Light Client Daemon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">GUIDES</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-terracli">Interacting with the network: CLI</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-ledger-nano-support">Ledger Nano Support</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-production">Run a node for production</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-join-network">Join a network</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-deploy-testnet">Deploy a testnet</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Validator Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-security">Security</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-faq">Validator FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Developer Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">TERRA CORE</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-pay">Pay</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-mint">Mint</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/terra-docs/docs/dev-spec-oracle">Oracle</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-market">Market</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-budget">Budget</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">CLIENT LIBRARIES</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-terrajs">Terra.js</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-terrapy">TerraPy</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Contribute<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-contributing">Contribution guidelines for Terra Core</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-help-translate">Help to translate</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Oracle</h1></header><article><div><span><p>The Oracle module forms a consensus on the exchange rate of Luna with respect to various fiat currencies, in order to facilitate swaps amongst the stablecoins mirroring those currencies as well as ensuring their price-stability.</p>
+<h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>The objective of the oracle module is to get accurate exchange rates of Luna with various fiat currencies such that the system can facilitate fair exchanges of Terra stablecoins and Luna. Should the system fail to gain an accurate understanding of Luna, a small set of arbitrageurs could profit at the cost of the entire system.</p>
+<p>In order to get fair exchange rates, the oracle operates in the following way:</p>
+<ul><li><p>Let P = {P1, P2, ...} be a time series split up by <code>params.VotePeriod</code>, currently 1 minute. In each P, validators must submit two votes:</p>
+<ul><li><p>A <code>MsgPricePrevote</code>, containing the SHA256 hash of the exchange rate of Luna is with respect to a Terra peg. For example, in order to support swaps for Terra currencies pegged to KRW, USD, SDR, three prevotes must be submitted each containing the uluna&lt;&gt;ukrw, uluna&lt;&gt;uusd, and uluna&lt;&gt;usdr exchange rates.</p></li>
+<li><p>A <code>MsgPriceVote</code>, containing the salt used to create the hash for the prevote submitted in P-1.</p></li>
+</ul></li>
+<li><p>At the end of each P, votes submitted are tallied.</p>
+<ul><li><p>The submitted salt of each vote is used to verify consistency with the prevote submitted by the validator in P-1. If the validator has not submitted a prevote, or the SHA256 resulting from the salt does not match the hash from the prevote, the vote is dropped.</p></li>
+<li><p>For each currency, if the total voting power of submitted votes exceeds 50%, a weighted median price of the vote is taken and is record on-chain as the effective exchange rate for Luna w.r.t. said currency for P+1.</p></li>
+<li><p>Winners of the ballot for P-1, i.e. voters that have managed to vote within a small band around the weighted median, get rewarded by spread fees collected by swap operations during P. For spread rewards, see <a href="market.md#spread-rewards">this</a>.</p></li>
+</ul></li>
+<li><p>If an insufficient amount of votes have been received for a currency, below <code>VoteThreshold</code>, its exchange rate is deleted from the store, and no swaps can be made with it during P.</p></li>
+</ul>
+<pre><code class="hljs css language-text">Period  |  P1 |  P2 |  P3 |  ...    |
+Prevote |  O  |  O  |  O  |  ...    |
+        |-----\-----\-----\-----    |
+Vote    |     |  O  |  O  |  ...    |
+</code></pre>
+<p>Effectively this scheme forces the voter to commit to a firm price submission before knowing the votes of others, and thereby reduces centralization and free-rider risk in the oracle.</p>
+<h2><a class="anchor" aria-hidden="true" id="vote-procedure"></a><a href="#vote-procedure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vote procedure</h2>
+<h3><a class="anchor" aria-hidden="true" id="submit-a-prevote"></a><a href="#submit-a-prevote" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Submit a prevote</h3>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// MsgPricePrevote - struct for prevoting on the PriceVote.</span>
+<span class="hljs-comment">// The purpose of prevote is to hide vote price with hash</span>
+<span class="hljs-comment">// which is formatted as hex string in SHA256("salt:price:denom:voter")</span>
+<span class="hljs-keyword">type</span> MsgPricePrevote <span class="hljs-keyword">struct</span> {
+    Hash      <span class="hljs-keyword">string</span>         <span class="hljs-string">`json:"hash"`</span> <span class="hljs-comment">// hex string</span>
+    Denom     <span class="hljs-keyword">string</span>         <span class="hljs-string">`json:"denom"`</span>
+    Feeder    sdk.AccAddress <span class="hljs-string">`json:"feeder"`</span>
+    Validator sdk.ValAddress <span class="hljs-string">`json:"validator"`</span>
+}
+</code></pre>
+<p>The <code>MsgPricePrevote</code> is just the submission of the leading 20 bytes of the SHA256 hex string run over a string containing the metadata of the actual <code>MsgPriceVote</code> to follow in the next period. The string is of the format: <code>salt:price:denom:voter</code>. Note that since in the subsequent <code>MsgPriceVote</code> the salt will have to be revealed, the salt used must be regenerated for each prevote submission.</p>
+<p><code>Denom</code> is the denomination of the currency for which the vote is being cast. For example, if the voter wishes to submit a prevote for the usd, then the correct <code>Denom</code> is <code>uusd</code>.</p>
+<p>The price used in the hash must be the open market price of Luna, w.r.t. to the currency matching <code>Denom</code>. For example, if <code>Denom</code> is <code>uusd</code> and the going price for Luna is 1 USD, then &quot;1&quot; must be used as the price, as 1 <code>uluna</code> = 1 <code>uusd</code>.</p>
+<p><code>Feeder</code> is used if the validator wishes to delegate oracle vote signing to a separate key to de-risk exposing their validator signing key.</p>
+<p><code>Validator</code> is the validator address of the original validator.</p>
+<h3><a class="anchor" aria-hidden="true" id="submit-a-vote"></a><a href="#submit-a-vote" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Submit a vote</h3>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// MsgPriceVote - struct for voting on the price of Luna denominated in various Terra assets.</span>
+<span class="hljs-comment">// For example, if the validator believes that the effective price of Luna in USD is 10.39, that's</span>
+<span class="hljs-comment">// what the price field would be, and if 1213.34 for KRW, same.</span>
+<span class="hljs-keyword">type</span> MsgPriceVote <span class="hljs-keyword">struct</span> {
+    Price     sdk.Dec        <span class="hljs-string">`json:"price"`</span> <span class="hljs-comment">// the effective price of Luna in {Denom}</span>
+    Salt      <span class="hljs-keyword">string</span>         <span class="hljs-string">`json:"salt"`</span>
+    Denom     <span class="hljs-keyword">string</span>         <span class="hljs-string">`json:"denom"`</span>
+    Feeder    sdk.AccAddress <span class="hljs-string">`json:"feeder"`</span>
+    Validator sdk.ValAddress <span class="hljs-string">`json:"validator"`</span>
+}
+</code></pre>
+<p>The <code>MsgPriceVote</code> contains the actual price vote. The <code>Salt</code> parameter must match the salt used to create the prevote, otherwise the voter cannot be rewarded.</p>
+<h3><a class="anchor" aria-hidden="true" id="delegate-voting-rights-to-another-key"></a><a href="#delegate-voting-rights-to-another-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delegate voting rights to another key</h3>
+<p>Validators may also elect to delegate voting rights to another key to prevent the block signing key from being kept online. To do so, they must submit a <code>MsgDelegateFeederPermission</code>, delegating their oracle voting rights to a <code>FeedDelegate</code>, which in turn sign <code>MsgPricePrevote</code> and <code>MsgPriceVote</code> on behalf of the validator.</p>
+<p>{% hint style=&quot;info&quot; %}
+Make sure to populate the delegate address with some coins by which to pay fees.
+{% endhint %}</p>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// MsgDelegateFeederPermission - struct for delegating oracle voting rights to another address.</span>
+<span class="hljs-keyword">type</span> MsgDelegateFeederPermission <span class="hljs-keyword">struct</span> {
+    Operator     sdk.ValAddress <span class="hljs-string">`json:"operator"`</span>
+    FeedDelegate sdk.AccAddress <span class="hljs-string">`json:"feed_delegate"`</span>
+}
+</code></pre>
+<p>The <code>Operator</code> field contains the operator address of the validator. The <code>FeedDelegate</code> field is the address of the delegate account that will be submitting price related votes and prevotes on behalf of the <code>Operator</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h2>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// Params oracle parameters</span>
+<span class="hljs-keyword">type</span> Params <span class="hljs-keyword">struct</span> {
+    VotePeriod       <span class="hljs-keyword">int64</span>   <span class="hljs-string">`json:"vote_period"`</span>        <span class="hljs-comment">// voting period in block height; tallys and reward claim period</span>
+    VoteThreshold    sdk.Dec <span class="hljs-string">`json:"vote_threshold"`</span>     <span class="hljs-comment">// minimum stake power threshold to update price</span>
+    OracleRewardBand sdk.Dec <span class="hljs-string">`json:"oracle_reward_band"`</span> <span class="hljs-comment">// band around the oracle weighted median to reward</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/5/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/terra-docs/docs/dev-spec-mint"><span class="arrow-prev">← </span><span>Mint</span></a><a class="docs-next button" href="/terra-docs/docs/dev-spec-market"><span>Market</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#vote-procedure">Vote procedure</a><ul class="toc-headings"><li><a href="#submit-a-prevote">Submit a prevote</a></li><li><a href="#submit-a-vote">Submit a vote</a></li><li><a href="#delegate-voting-rights-to-another-key">Delegate voting rights to another key</a></li></ul></li><li><a href="#parameters">Parameters</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://ouiliame.github.io/terra-docs/" class="nav-home"><img src="/terra-docs/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/terra-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/terra-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/terra-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/terra-docs/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/terra-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

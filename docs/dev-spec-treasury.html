@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Treasury · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Treasury module is the &quot;central bank&quot; of the Terra economy. It monitors changes in the macroeconomic variables, and adjusts Terra monetary polices accordingly."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Treasury · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ouiliame.github.io/terra-docs/"/><meta property="og:description" content="The Treasury module is the &quot;central bank&quot; of the Terra economy. It monitors changes in the macroeconomic variables, and adjusts Terra monetary polices accordingly."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/terra-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono&amp;display=swap"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/terra-docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/terra-docs/css/main.css"/><script src="/terra-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/terra-docs/"><img class="logo" src="/terra-docs/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/terra-docs/docs/dev-intro" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>TERRA CORE</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Overview<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-faq">Terra FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Terra Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-what-is-terra">What is Terra?</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-how-terra-works">How Terra Works</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">BASICS</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-accounts-wallets">Accounts &amp; Wallets</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-transaction">Transactions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">MINING &amp; CONSENSUS</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-dpos">Delegated Proof-of-Stake (DPoS)</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-luna-staking">Luna &amp; Staking</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-validators">Validators</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-price-oracle">Price Oracle</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">STABILITY</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-monetary-policy">Monetary Policy</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-subcurrencies">Subcurrencies</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-stabilization">Price Stabilization</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-miner-incentives">Miner Incentives</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ADOPTION</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-fiscal-policy">Fiscal Policy</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-governance">Governance</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-dapp-platform">Powering the Innovation of Money</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">TERRA VS. ...</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-comparison">Other Stablecoins</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Node Software<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-users">For non-validating users</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-light-client">Light Client Daemon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">GUIDES</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-terracli">Interacting with the network: CLI</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-ledger-nano-support">Ledger Nano Support</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-production">Run a node for production</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-join-network">Join a network</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-deploy-testnet">Deploy a testnet</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Validator Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-security">Security</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/validator-faq">Validator FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Developer Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">TERRA CORE</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-pay">Pay</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-mint">Mint</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-oracle">Oracle</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-market">Market</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/terra-docs/docs/dev-spec-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-spec-budget">Budget</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">CLIENT LIBRARIES</h4><ul><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-terrajs">Terra.js</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-terrapy">TerraPy</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Contribute<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-contributing">Contribution guidelines for Terra Core</a></li><li class="navListItem"><a class="navItem" href="/terra-docs/docs/dev-help-translate">Help to translate</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Treasury</h1></header><article><div><span><p>The Treasury module is the &quot;central bank&quot; of the Terra economy. It monitors changes in the macroeconomic variables, and adjusts Terra monetary polices accordingly.</p>
+<h2><a class="anchor" aria-hidden="true" id="observed-macroecnomic-variables"></a><a href="#observed-macroecnomic-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observed macroecnomic variables</h2>
+<p>The treasury observes two main variables:</p>
+<ul><li>Periodic Tax returns: stability fee income that has been made in a given period, namely <code>WindowShort</code>. In tandem to this, the treasury also monitors the rolling average of stability fee revenues in a longer timeframe, <code>WindowLong</code>, to be able to compare the performance of tax income in a shorter time window compared to a longer one.</li>
+<li>Periodic Terra seigniorage burn: the amount of Terra seigniorage that has been burned (total periodic seigniorage * mining reward weight) in a given period. Similar to tax returns, the treasury measures the index in light of a short and long time window.</li>
+</ul>
+<p>Tax income and seigniorage burn combined makes up the total mining rewards for Luna.</p>
+<h2><a class="anchor" aria-hidden="true" id="monetary-policy-tools"></a><a href="#monetary-policy-tools" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Monetary policy tools</h2>
+<p>The treasury module has two monetary policy levers in its toolkit. The tax rate, by which it can increase fees coming in from Terra transactions, and and the mining reward weight, which is the portion of seigniorage that is burned to reward miners via scarcity. Every <code>WindowLong</code>, it re-evaluates each lever to stabilize unit staking returns for Luna, thereby optimizing for stable cash flows from Terra staking.</p>
+<h3><a class="anchor" aria-hidden="true" id="tax-rate"></a><a href="#tax-rate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tax rate</h3>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// t(t+1) = t(t) * (TL_year(t) + INC) / TL_month(t)</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">updateTaxPolicy</span><span class="hljs-params">(ctx sdk.Context, k Keeper)</span> <span class="hljs-params">(newTaxRate sdk.Dec)</span></span> {
+    params := k.GetParams(ctx)
+
+    oldTaxRate := k.GetTaxRate(ctx, util.GetEpoch(ctx))
+    inc := params.MiningIncrement
+    tlYear := RollingAverageIndicator(ctx, k, params.WindowLong, TRL)
+    tlMonth := RollingAverageIndicator(ctx, k, params.WindowShort, TRL)
+
+    <span class="hljs-comment">// No revenues, hike as much as possible.</span>
+    <span class="hljs-keyword">if</span> tlMonth.Equal(sdk.ZeroDec()) {
+        newTaxRate = params.TaxPolicy.RateMax
+    } <span class="hljs-keyword">else</span> {
+        newTaxRate = oldTaxRate.Mul(tlYear.Mul(inc)).Quo(tlMonth)
+    }
+
+    newTaxRate = params.TaxPolicy.Clamp(oldTaxRate, newTaxRate)
+
+    <span class="hljs-comment">// Set the new tax rate to the store</span>
+    k.SetTaxRate(ctx, newTaxRate)
+    <span class="hljs-keyword">return</span>
+}
+</code></pre>
+<p>At the point of evaluation, the treasury hikes up tax rates when tax revenues in a shorter time window is performing poorly in comparison to the longer term tax revenue average. It lowers tax rates when short term tax revenues are outperforming the longer term index.</p>
+<h3><a class="anchor" aria-hidden="true" id="reward-weight"></a><a href="#reward-weight" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reward weight</h3>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// w(t+1) = w(t)*SB_target/SB_rolling(t)</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">updateRewardPolicy</span><span class="hljs-params">(ctx sdk.Context, k Keeper)</span> <span class="hljs-params">(newRewardWeight sdk.Dec)</span></span> {
+    params := k.GetParams(ctx)
+
+    curEpoch := util.GetEpoch(ctx)
+    oldWeight := k.GetRewardWeight(ctx, curEpoch)
+    sbTarget := params.SeigniorageBurdenTarget
+
+    seigniorageSum := SumIndicator(ctx, k, params.WindowShort, SeigniorageRewardsForEpoch)
+    totalSum := SumIndicator(ctx, k, params.WindowShort, MiningRewardForEpoch)
+
+    <span class="hljs-comment">// No revenues; hike as much as possible</span>
+    <span class="hljs-keyword">if</span> totalSum.Equal(sdk.ZeroDec()) || seigniorageSum.Equal(sdk.ZeroDec()) {
+        newRewardWeight = params.RewardPolicy.RateMax
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// Seigniorage burden out of total rewards</span>
+        sb := seigniorageSum.Quo(totalSum)
+        newRewardWeight = oldWeight.Mul(sbTarget.Quo(sb))
+    }
+
+    newRewardWeight = params.RewardPolicy.Clamp(oldWeight, newRewardWeight)
+
+    <span class="hljs-comment">// Set the new reward weight</span>
+    k.SetRewardWeight(ctx, newRewardWeight)
+    <span class="hljs-keyword">return</span>
+}
+</code></pre>
+<p>The treasury mirrors the tax rate when adjusting the mining reward weight. It observes the overall burden seigniorage burn needs to bear in the overall reward profile, <code>SeigniorageBurdenTarget</code>, and hikes up rates accordingly as tax rates rise. In order to make sure that unit mining rewards do not stay stagnant, the treasury adds a <code>MiningIncrement</code> to each policy update, such that mining rewards increase steadily over time.</p>
+<h3><a class="anchor" aria-hidden="true" id="policy-contraints"></a><a href="#policy-contraints" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Policy contraints</h3>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// PolicyConstraints wraps constraints around updating a key Treasury variable</span>
+<span class="hljs-keyword">type</span> PolicyConstraints <span class="hljs-keyword">struct</span> {
+    RateMin       sdk.Dec  <span class="hljs-string">`json:"rate_min"`</span>
+    RateMax       sdk.Dec  <span class="hljs-string">`json:"rate_max"`</span>
+    Cap           sdk.Coin <span class="hljs-string">`json:"cap"`</span>
+    ChangeRateMax sdk.Dec  <span class="hljs-string">`json:"change_max"`</span>
+}
+
+<span class="hljs-comment">// Clamp constrains a policy variable update within the policy constraints</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(pc PolicyConstraints)</span> <span class="hljs-title">Clamp</span><span class="hljs-params">(prevRate sdk.Dec, newRate sdk.Dec)</span> <span class="hljs-params">(clampedRate sdk.Dec)</span></span> {
+    <span class="hljs-keyword">if</span> newRate.LT(pc.RateMin) {
+        newRate = pc.RateMin
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> newRate.GT(pc.RateMax) {
+        newRate = pc.RateMax
+    }
+
+    delta := newRate.Sub(prevRate)
+    <span class="hljs-keyword">if</span> newRate.GT(prevRate) {
+        <span class="hljs-keyword">if</span> delta.GT(pc.ChangeRateMax) {
+            newRate = prevRate.Add(pc.ChangeRateMax)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span> delta.Abs().GT(pc.ChangeRateMax) {
+            newRate = prevRate.Sub(pc.ChangeRateMax)
+        }
+    }
+    <span class="hljs-keyword">return</span> newRate
+}
+</code></pre>
+<p>Both tax rate and seigniorage burn weight updates are limited by <code>PolicyConstraint</code>, which specifies the floor, ceiling, and the max periodic changes for each variable.</p>
+<h2><a class="anchor" aria-hidden="true" id="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h2>
+<pre><code class="hljs css language-go"><span class="hljs-comment">// Params treasury parameters</span>
+<span class="hljs-keyword">type</span> Params <span class="hljs-keyword">struct</span> {
+    TaxPolicy    PolicyConstraints <span class="hljs-string">`json:"tax_policy"`</span>
+    RewardPolicy PolicyConstraints <span class="hljs-string">`json:"reward_policy"`</span>
+
+    SeigniorageBurdenTarget sdk.Dec <span class="hljs-string">`json:"seigniorage_burden_target"`</span>
+    MiningIncrement         sdk.Dec <span class="hljs-string">`json:"mining_increment"`</span>
+
+    WindowShort     sdk.Int <span class="hljs-string">`json:"window_short"`</span>
+    WindowLong      sdk.Int <span class="hljs-string">`json:"window_long"`</span>
+    WindowProbation sdk.Int <span class="hljs-string">`json:"window_probation"`</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/31/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/terra-docs/docs/dev-spec-market"><span class="arrow-prev">← </span><span>Market</span></a><a class="docs-next button" href="/terra-docs/docs/dev-spec-budget"><span>Budget</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#observed-macroecnomic-variables">Observed macroecnomic variables</a></li><li><a href="#monetary-policy-tools">Monetary policy tools</a><ul class="toc-headings"><li><a href="#tax-rate">Tax rate</a></li><li><a href="#reward-weight">Reward weight</a></li><li><a href="#policy-contraints">Policy contraints</a></li></ul></li><li><a href="#parameters">Parameters</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://ouiliame.github.io/terra-docs/" class="nav-home"><img src="/terra-docs/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/terra-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/terra-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/terra-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/terra-docs/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/terra-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
