@@ -61,19 +61,19 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Market</h1></header><article><div><span><p>The Market module contains the logic for atomic swaps between Terra currencies (e.g. UST&lt;&gt;KRT), as well as between Terra and Luna (e.g. SDT&lt;&gt;LUNA).</p>
-<p>A user can swap SDT (TerraSDR) and UST (TerraUSD) at the exchange rate registered with the oracle, with an additional minimum spread of 2%.</p>
-<p>For example, assume that oracle reports that the Luna&lt;&gt;SDT exchange rate is 10, and for Luna&lt;&gt;KRT was 10,000. Factoring in the spread, swapping 1 SDT will return 980 KRT worth of Luna (2% of 1000 is 20, taken as the swap fee).</p>
-<p>A user can swap any Terra currency for Luna at the oracle exchange rate. Using the same exchange rates in the above example, a user can swap 1 SDT for 0.1 Luna, or 0.1 Luna for 1 SDT (before spread).</p>
+<p>A user can swap SDT (TerraSDR), UST (TerraUSD) for Luna at the exchange rate registered with the oracle, and the network will charge a minimum spread of 2% taken as the network's swap fee against front-running.</p>
+<p>For example, assume that oracle reports that the Luna&lt;&gt;SDT exchange rate is 10, and for Luna&lt;&gt;KRT, 10,000. Factoring in the spread, swapping 1 SDT will return 980 KRT worth of Luna (2% of 1000 is 20, taken as the swap fee).</p>
+<p>Using the same exchange rates in the above example, a user can swap 1 SDT for 0.1 Luna, or 0.1 Luna for 1 SDT (before spread).</p>
 <h2><a class="anchor" aria-hidden="true" id="constant-product-market-maker"></a><a href="#constant-product-market-maker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constant Product Market-Maker</h2>
 <p>Starting with Columbus-3 (Vodka testnet), Terra now uses a constant-product automated market making algorithm to ensure liquidity for Terra&lt;&gt;Luna swaps.</p>
 <p>Before, Terra had enforced a daily Luna supply change cap such that Luna could inflate or deflate only up to the cap in any given 24 hour period, after which swap transactions would fail. This was to prevent excessive volatility in Luna supply which could lead to divesting attacks (a large increase in Terra supply putting the peg at risk) or consensus attacks (a large increase in Luna supply being staked can lead to a consensus attack on the blockchain).</p>
 <p>Now, with constant-product, the following invariant CP is maintained throughout any swaps, and informs the market-maker on how to properly price swaps whilst maintaining liquidity:</p>
 <pre><code class="hljs css language-text">CP = (Total units of TerraSDR Pool) * (Total SDR value of Luna Pool)
 </code></pre>
-<p>For instance, if we start with equal pools of Terra and Luna, both worth 1000 SDR total, a swap of 100 UST for Luna gives you 111.111... Luna.</p>
+<p>For instance, if we start with equal pools of Terra and Luna, both worth 1000 SDR total, a swap of 100 SDT for Luna gives you around 90.91 Luna. The offer of 100 SDT is added to the Terra pool, and the 90.91 SDT worth of Luna are taken out of the Luna pool.</p>
 <pre><code class="hljs css language-text">CP = 1000000 SDR
-(1000 UST) * (1000 SDR of Luna) = 1000000 SDR
-(900 UST) * (1111.111 SDR of Luna) = 1000000 SDR
+(1000 SDT) * (1000 SDR of Luna) = 1000000 SDR
+(1100 SDT) * (909.0909... SDR of Luna) = 1000000 SDR
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="auto-replenishing-liquidity-pools"></a><a href="#auto-replenishing-liquidity-pools" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto-Replenishing Liquidity Pools</h3>
 <p>The market starts out with two liquidity pools of equal sizes, one representing Terra (all denominations) and another representing Luna, initialiazed by the parameter <code>BasePool</code>. The blockchain maintains in its state <code>TerraPoolDelta</code>, which is a number that represents the deviation between Terra/Luna pools from their initial base values -- one number that  provides a descriptive snapshot of the demand difference.</p>
