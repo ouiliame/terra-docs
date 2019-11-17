@@ -121,7 +121,7 @@ Vote    |     |  O  |  O  |  ...    |
 </code></pre>
 <p>The <code>MsgExchangeRateVote</code> contains the actual price vote. The <code>Salt</code> parameter must match the salt used to create the prevote, otherwise the voter cannot be rewarded.</p>
 <h3><a class="anchor" aria-hidden="true" id="delegate-voting-rights-msgdelegatefeedconsent"></a><a href="#delegate-voting-rights-msgdelegatefeedconsent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delegate voting rights - <code>MsgDelegateFeedConsent</code></h3>
-<p>Validators may also elect to delegate voting rights to another key to prevent the block signing key from being kept online. To do so, they must submit a <code>MsgDelegateFeedConsent</code>, delegating their oracle voting rights to a <code>FeedDelegate</code>, which in turn sign <code>MsgExchangeRatePrevote</code> and <code>MsgExchangeRateVote</code> on behalf of the validator.</p>
+<p>Validators may also elect to delegate voting rights to another key to prevent the block signing key from being kept online. To do so, they must submit a <code>MsgDelegateFeedConsent</code>, delegating their oracle voting rights to a <code>Delegatee</code> that sign <code>MsgExchangeRatePrevote</code> and <code>MsgExchangeRateVote</code> on behalf of the validator.</p>
 <blockquote class="important"><p>Make sure to populate the delegate address with some coins by which to pay fees.</p>
 </blockquote>
 <pre><code class="hljs css language-go"><span class="hljs-comment">// MsgDelegateFeedConsent - struct for delegating oracle voting rights to another address.</span>
@@ -130,7 +130,7 @@ Vote    |     |  O  |  O  |  ...    |
     Delegatee sdk.AccAddress <span class="hljs-string">`json:"delegatee" yaml:"delegatee"`</span>
 }
 </code></pre>
-<p>The <code>Operator</code> field contains the operator address of the validator. The <code>FeedDelegate</code> field is the address of the delegate account that will be submitting price related votes and prevotes on behalf of the <code>Operator</code>.</p>
+<p>The <code>Operator</code> field contains the operator address of the validator. The <code>Delegatee</code> field is the address of the delegate account that will be submitting price related votes and prevotes on behalf of the <code>Operator</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="state"></a><a href="#state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>State</h2>
 <pre><code class="hljs css language-go"><span class="hljs-keyword">type</span> Keeper <span class="hljs-keyword">struct</span> {
     cdc        *codec.Codec
@@ -153,12 +153,12 @@ Vote    |     |  O  |  O  |  ...    |
 <ul><li><code>denom</code>: <code>string</code></li>
 <li><code>v</code>: <code>sdk.ValAddress</code></li>
 </ul>
-<p>Retrieves a <code>PricePrevote</code> containing validator <code>v</code>'s prevote for a given <code>denom</code> for the current <code>VotePeriod</code>.</p>
+<p>Retrieves a <code>ExchangeRatePrevote</code> containing validator <code>v</code>'s prevote for a given <code>denom</code> for the current <code>VotePeriod</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="votes-vote-denom-v"></a><a href="#votes-vote-denom-v" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Votes - <code>Vote[denom, v]</code></h3>
 <ul><li><code>denom</code>: <code>string</code></li>
 <li><code>v</code>: <code>sdk.ValAddress</code></li>
 </ul>
-<p>Retrieves a <code>PriceVote</code> containing validator <code>v</code>'s vote for a given <code>denom</code> for the current <code>VotePeriod</code>.</p>
+<p>Retrieves a <code>ExchangeRateVote</code> containing validator <code>v</code>'s vote for a given <code>denom</code> for the current <code>VotePeriod</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="luna-exchange-rate-exchangerate-denom"></a><a href="#luna-exchange-rate-exchangerate-denom" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Luna Exchange Rate - <code>ExchangeRate[denom]</code></h3>
 <ul><li><code>denom</code>: <code>string</code></li>
 </ul>
