@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Getting Started · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Information on how to join the current testnet (`genesis.json` file and seeds) is held in our &quot;networks&quot; [repo](https://github.com/terra-project/networks)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Getting Started · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.wcdc.me/"/><meta property="og:description" content="Information on how to join the current testnet (`genesis.json` file and seeds) is held in our &quot;networks&quot; [repo](https://github.com/terra-project/networks)."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:400,500,700&amp;display=swap"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/viz.js"></script><script type="text/javascript" src="/js/render-graphs.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer no-print"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/dev-intro" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc no-print"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Validator Guide</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Overview<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-faq">Terra FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Terra Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-what-is-terra">What is Terra?</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-how-terra-works">How Terra Works</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">BASICS</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-accounts-wallets">Accounts &amp; Wallets</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-transaction">Transactions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">MINING &amp; CONSENSUS</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-dpos">Delegated Proof-of-Stake (DPoS)</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-luna-staking">Luna &amp; Staking</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-validators">Validators</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-price-oracle">Price Oracle</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">STABILITY</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-monetary-policy">Monetary Policy</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-subcurrencies">Subcurrencies</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-stabilization">Price Stabilization</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-miner-incentives">Miner Incentives</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ADOPTION</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-fiscal-policy">Fiscal Policy</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-governance">Governance</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-dapp-platform">Powering the Innovation of Money</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">TERRA VS. ...</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-comparison">Other Stablecoins</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Node Software<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-users">User Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-light-client">Light Client Daemon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">GUIDES</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-terracli">terracli Reference Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-ledger-nano-support">Ledger Nano Support</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-production">Run a node for production</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-join-network">Join a network</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-deploy-testnet">Deploy a testnet</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Validator Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/validator-intro">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/validator-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-security">Security</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-faq">Validator FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Developer Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-client-libraries">Client Libraries</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-codebase">Codebase</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">CORE MODULES</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-spec-distribution">Distribution</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-staking">Staking</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-auth">Auth</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-bank">Bank</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-supply">Supply</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-oracle">Oracle</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-governance">Governance</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-market">Market</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Contribute<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-contributing">Contribution guidelines for Terra Core</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-help-translate">Help to translate</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><img class="print-only" src="/img/docs_logo.svg"/><br/><header class="postHeader"><h1 class="postHeaderTitle">Getting Started</h1></header><article><div><span><p>Information on how to join the current testnet (<code>genesis.json</code> file and seeds) is held in our &quot;networks&quot; <a href="https://github.com/terra-project/networks">repo</a>.
+Please check there if you are looking to join our latest testnet.</p>
+<blockquote class="important"><p>This documentation is only intended for validators of the <strong>Soju public testnet</strong> and the <strong>Columbus public mainnet</strong>.</p>
+</blockquote>
+<p>Before setting up your validator node, make sure you've already gone through the <a href="dev-join-network.md">Full Node Setup</a> guide.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-a-validator"></a><a href="#what-is-a-validator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a Validator?</h2>
+<p><a href="../features/overview/">Validators</a> are responsible for committing new blocks to the blockchain through voting. To make sure validators remain loyal to the network, the Terra Protocol requires a &quot;security deposit&quot; of Luna tokens to be staked while the validators are active. A validator's stake is slashed if they become unavailable or sign multiple blocks at the same height.</p>
+<p>Users looking to operate a Terra validator, or are simply looking to learn more should study up on the correct <a href="../features/overview/security.md">security model</a>, study <a href="../features/overview/validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks">robust network topologies</a>, and familiarize themselves with Tendermint and <a href="../features/overview/">general information</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-your-validator"></a><a href="#create-your-validator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create Your Validator</h2>
+<p>Your <code>terravalconspub</code> can be used to create a new validator by staking Luna tokens. You can find your validator pubkey by running:</p>
+<pre><code class="hljs css language-bash">terrad tendermint show-validator
+</code></pre>
+<p>Next, craft your <code>terrad gentx</code> command:</p>
+<blockquote class=" tip "><p>Don't use more Luna than you have!
+You can always get more by using the <a href="https://faucet.terra.money/">Faucet</a>!</p>
+</blockquote>
+<pre><code class="hljs css language-bash">terracli tx staking create-validator \
+  --amount=5000000uluna \
+  --pubkey=$(terrad tendermint show-validator) \
+  --moniker=<span class="hljs-string">"choose a moniker"</span> \
+  --chain-id=&lt;chain_id&gt; \
+  --from=&lt;key_name&gt; \
+  --commission-rate=<span class="hljs-string">"0.10"</span> \
+  --commission-max-rate=<span class="hljs-string">"0.20"</span> \
+  --commission-max-change-rate=<span class="hljs-string">"0.01"</span> \
+  --min-self-delegation=<span class="hljs-string">"1"</span>
+</code></pre>
+<p><strong>Note</strong>: When specifying commission parameters, the <code>commission-max-change-rate</code> is used to measure % <em>point</em> change over the <code>commission-rate</code>. E.g. 1% to 2% is a 100% rate increase, but only 1 percentage point.</p>
+<p><strong>Note</strong>: If unspecified, <code>consensus_pubkey</code> will default to the output of <code>terrad tendermint show-validator</code>. <code>key_name</code> is the name of the private key that will be used to sign the transaction.</p>
+<h2><a class="anchor" aria-hidden="true" id="participate-in-genesis-as-a-validator"></a><a href="#participate-in-genesis-as-a-validator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Participate in genesis as a validator</h2>
+<p><strong>Note</strong>: This section only concerns validators that want to be in the genesis file. If the chain you want to validate is already live, skip this section.</p>
+<p><strong>Note</strong>: The currently running Soju testnet will not use this process. They will be bootsrapped using Tendermint seed validators. You will just need to use the <a href="validators.md#create-your-validator">create-validator</a> command in order to join as a validator for these networks.</p>
+<p>If you want to participate in genesis as a validator, you need to justify that you (or a delegator) have some stake at genesis, create one (or multiple) transaction to bond this stake to your validator address, and include this transaction in the genesis file.</p>
+<p>We thus need to distinguish two cases:</p>
+<ul><li>Case 1: You want to bond the initial stake from your validator's address.</li>
+<li>Case 2: You want to bond the initial stake from a delegator's address.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="case-1-the-initial-stake-comes-from-your-validators-address"></a><a href="#case-1-the-initial-stake-comes-from-your-validators-address" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Case 1: The initial stake comes from your validator's address</h3>
+<p>In this case, you will create a <code>gentx</code>:</p>
+<pre><code class="hljs css language-bash">terrad gentx \
+  --amount &lt;amount_of_delegation&gt; \
+  --commission-rate &lt;commission_rate&gt; \
+  --commission-max-rate &lt;commission_max_rate&gt; \
+  --commission-max-change-rate &lt;commission_max_change_rate&gt; \
+  --pubkey &lt;consensus_pubkey&gt; \
+  --name &lt;key_name&gt;
+</code></pre>
+<p><strong>Note</strong>: This command automatically store your <code>gentx</code> in <code>~/.terrad/config/gentx</code> for it to be processed at genesis.</p>
+<blockquote class="info"><p>Consult <code>terrad gentx --help</code> for more information on the flags defaults.</p>
+</blockquote>
+<p>A <code>gentx</code> is a JSON file carrying a self-delegation. All genesis transactions are collected by a <code>genesis coordinator</code> and validated against an initial <code>genesis.json</code>. Such initial <code>genesis.json</code> contains only a list of accounts and their coins. Once the transactions are processed, they are merged in the <code>genesis.json</code>'s <code>gentxs</code> field.</p>
+<h3><a class="anchor" aria-hidden="true" id="case-2-the-initial-stake-comes-from-a-delegators-address"></a><a href="#case-2-the-initial-stake-comes-from-a-delegators-address" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Case 2: The initial stake comes from a delegator's address</h3>
+<p>In this case, you need both the signature of the validator and the delegator. Start by creating an unsigned <code>create-validator</code> transaction, and save it in a file called <code>unsignedValTx</code>:</p>
+<pre><code class="hljs css language-bash">terracli tx staking create-validator \
+  --amount=5luna \
+  --pubkey=$(terrad tendermint show-validator) \
+  --moniker=<span class="hljs-string">"choose a moniker"</span> \
+  --chain-id=&lt;chain_id&gt; \
+  --from=&lt;key_name&gt; \
+  --commission-rate=<span class="hljs-string">"0.10"</span> \
+  --commission-max-rate=<span class="hljs-string">"0.20"</span> \
+  --commission-max-change-rate=<span class="hljs-string">"0.01"</span> \
+  --address-delegator=<span class="hljs-string">"address of the delegator"</span> \
+  --generate-only \
+  &gt; unsignedValTx.json
+</code></pre>
+<p>Then, sign this <code>unsignedValTx</code> with your validator's private key, and save the output in a new file <code>signedValTx.json</code>:</p>
+<pre><code class="hljs css language-bash">terracli tx sign unsignedValTx.json --from=&lt;validator_key_name&gt; &gt; signedValTx.json
+</code></pre>
+<p>Then, pass this file to the delegator, who needs to run the following command:</p>
+<pre><code class="hljs css language-bash">terracli tx sign signedValTx.json --from=&lt;delegator_key_name&gt; &gt; gentx.json
+</code></pre>
+<p>This <code>gentx.json</code> needs to be included in the <code>~/.terrad/config/gentx</code> folder on the validator's machine to be processed at genesis, just like in case 1 (except here it needs to be copied manually into the folder).</p>
+<h3><a class="anchor" aria-hidden="true" id="copy-the-initial-genesis-file-and-process-genesis-transactions"></a><a href="#copy-the-initial-genesis-file-and-process-genesis-transactions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Copy the Initial Genesis File and Process Genesis Transactions</h3>
+<p>Fetch the <code>genesis.json</code> file into <code>terrad</code>'s config directory.</p>
+<pre><code class="hljs css language-bash">mkdir -p <span class="hljs-variable">$HOME</span>/.terrad/config
+curl https://raw.githubusercontent.com/terra-project/networks/master/latest/genesis.json &gt; <span class="hljs-variable">$HOME</span>/.terrad/config/genesis.json
+</code></pre>
+<p><strong>Note:</strong> We use the <code>latest</code> directory in the <a href="https://github.com/terra-project/networks">testnets repo</a> which contains details for the latest testnet. If you are connecting to a different testnet, ensure you get the right files.</p>
+<p>You also need to fetch the genesis transactions of all the other genesis validators. For now there is no repository where genesis transactions can be submitted by validators, but this will as soon as we try out this feature in a testnet.</p>
+<p>Once you've collected all genesis transactions in <code>~/.terrad/config/gentx</code>, you can run:</p>
+<pre><code class="hljs css language-bash">terrad collect-gentxs
+</code></pre>
+<p><strong>Note:</strong> The accounts from which you delegate in the <code>gentx</code> transactions need to possess stake tokens in the genesis file, otherwise <code>collect-gentx</code> will fail.</p>
+<p>The previous command will collect all genesis transactions and finalise <code>genesis.json</code>. To verify the correctness of the configuration and start the node run:</p>
+<pre><code class="hljs css language-bash">terrad start
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="edit-validator-description"></a><a href="#edit-validator-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit Validator Description</h2>
+<p>You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below, otherwise the field will default to empty (<code>--moniker</code> defaults to the machine name).</p>
+<p>The <code>--identity</code> can be used as to verify identity with systems like Keybase or UPort. When using with Keybase <code>--identity</code> should be populated with a 16-digit string that is generated with a <a href="https://keybase.io">keybase.io</a> account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.</p>
+<pre><code class="hljs css language-bash">terracli tx staking edit-validator \
+  --moniker=<span class="hljs-string">"choose a moniker"</span> \
+  --website=<span class="hljs-string">"https://terra.money"</span> \
+  --identity=6A0D65E29A4CBC8E \
+  --details=<span class="hljs-string">"To infinity and beyond!"</span> \
+  --chain-id=&lt;chain_id&gt; \
+  --from=&lt;key_name&gt; \
+  --commission-rate=<span class="hljs-string">"0.10"</span>
+</code></pre>
+<p><strong>Note</strong>: The <code>commission-rate</code> value must adhere to the following invariants:</p>
+<ul><li>Must be between 0 and the validator's <code>commission-max-rate</code></li>
+<li>Must not exceed the validator's <code>commission-max-change-rate</code> which is maximum % point change rate <strong>per day</strong>. In other words, a validator can only change its commission once per day and within <code>commission-max-change-rate</code> bounds.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="view-validator-description"></a><a href="#view-validator-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View Validator Description</h2>
+<p>View the validator's information with this command:</p>
+<pre><code class="hljs css language-bash">terracli query staking validator &lt;account_terra&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="track-validator-signing-information"></a><a href="#track-validator-signing-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Track Validator Signing Information</h2>
+<p>In order to keep track of a validator's signatures in the past you can do so by using the <code>signing-info</code> command:</p>
+<pre><code class="hljs css language-bash">terracli query slashing signing-info &lt;validator-pubkey&gt;\
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="unjail-validator"></a><a href="#unjail-validator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unjail Validator</h2>
+<p>When a validator is &quot;jailed&quot; for downtime, you must submit an <code>Unjail</code> transaction from the operator account in order to be able to get block proposer rewards again (depends on the zone fee distribution).</p>
+<pre><code class="hljs css language-bash">terracli tx slashing unjail \
+    --from=&lt;key_name&gt; \
+    --chain-id=&lt;chain_id&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="confirm-your-validator-is-running"></a><a href="#confirm-your-validator-is-running" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Confirm Your Validator is Running</h2>
+<p>Your validator is active if the following command returns anything:</p>
+<pre><code class="hljs css language-bash">terracli query tendermint-validator-set | grep <span class="hljs-string">"<span class="hljs-variable">$(terrad tendermint show-validator)</span>"</span>
+</code></pre>
+<p>You should also be able to see your validator on the Terra Station. You are looking for the <code>bech32</code> encoded <code>address</code> in the <code>~/.terrad/config/priv_validator.json</code> file.</p>
+<blockquote class="important"><p>To be in the validator set, you need to have more total voting power than the 100th validator.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="common-problems"></a><a href="#common-problems" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Problems</h2>
+<h3><a class="anchor" aria-hidden="true" id="problem-1-my-validator-has-voting_power-0"></a><a href="#problem-1-my-validator-has-voting_power-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Problem #1: My validator has <code>voting_power: 0</code></h3>
+<p>Your validator has become auto-unbonded. In Soju and Columbus networks, we unbond validators if they do not vote on <code>50</code> of the last <code>100</code> blocks. Since blocks are proposed every ~2 seconds, a validator unresponsive for ~100 seconds will become unbonded. This usually happens when your <code>terrad</code> process crashes.</p>
+<p>Here's how you can return the voting power back to your validator. First, if <code>terrad</code> is not running, start it up again:</p>
+<pre><code class="hljs css language-bash">terrad start
+</code></pre>
+<p>Wait for your full node to catch up to the latest block. Next, run the following command. Note that <code>&lt;terra&gt;</code> is the address of your validator account, and <code>&lt;name&gt;</code> is the name of the validator account. You can find this info by running <code>terracli keys list</code>.</p>
+<pre><code class="hljs css language-bash">terracli tx slashing unjail &lt;terra&gt; --chain-id=&lt;chain_id&gt; --from=&lt;from&gt;
+</code></pre>
+<blockquote class=" warning "><p>If you don't wait for <code>terrad</code> to sync before running <code>unjail</code>, you will receive an error message telling you your validator is still jailed.</p>
+</blockquote>
+<p>Lastly, check your validator again to see if your voting power is back.</p>
+<pre><code class="hljs css language-bash">terracli status
+</code></pre>
+<p>You may notice that your voting power is less than it used to be. That's because you got slashed for downtime!</p>
+<h3><a class="anchor" aria-hidden="true" id="problem-2-my-terrad-crashes-because-of-too-many-open-files"></a><a href="#problem-2-my-terrad-crashes-because-of-too-many-open-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Problem #2: My <code>terrad</code> crashes because of <code>too many open files</code></h3>
+<p>The default number of files Linux can open (per-process) is <code>1024</code>. <code>terrad</code> is known to open more than <code>1024</code> files. This causes the process to crash. A quick fix is to run <code>ulimit -n 4096</code> (increase the number of open files allowed) and then restart the process with <code>terrad start</code>. If you are using <code>systemd</code> or another process manager to launch <code>terrad</code> this may require some configuration at that level. A sample <code>systemd</code> file to fix this issue is below:</p>
+<pre><code class="hljs css language-text"># /etc/systemd/system/terrad.service
+[Unit]
+Description=Terra Columbus Node
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/go/bin/terrad start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/19/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/validator-intro"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/validator-security"><span>Security</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-a-validator">What is a Validator?</a></li><li><a href="#create-your-validator">Create Your Validator</a></li><li><a href="#participate-in-genesis-as-a-validator">Participate in genesis as a validator</a><ul class="toc-headings"><li><a href="#case-1-the-initial-stake-comes-from-your-validators-address">Case 1: The initial stake comes from your validator's address</a></li><li><a href="#case-2-the-initial-stake-comes-from-a-delegators-address">Case 2: The initial stake comes from a delegator's address</a></li><li><a href="#copy-the-initial-genesis-file-and-process-genesis-transactions">Copy the Initial Genesis File and Process Genesis Transactions</a></li></ul></li><li><a href="#edit-validator-description">Edit Validator Description</a></li><li><a href="#view-validator-description">View Validator Description</a></li><li><a href="#track-validator-signing-information">Track Validator Signing Information</a></li><li><a href="#unjail-validator">Unjail Validator</a></li><li><a href="#confirm-your-validator-is-running">Confirm Your Validator is Running</a></li><li><a href="#common-problems">Common Problems</a><ul class="toc-headings"><li><a href="#problem-1-my-validator-has-voting_power-0">Problem #1: My validator has <code>voting_power: 0</code></a></li><li><a href="#problem-2-my-terrad-crashes-because-of-too-many-open-files">Problem #2: My <code>terrad</code> crashes because of <code>too many open files</code></a></li></ul></li></ul></nav></div><footer class="nav-footer no-print" id="footer"><section class="sitemap"><a href="https://terra.money" class="nav-home"><img src="/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
