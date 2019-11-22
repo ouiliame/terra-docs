@@ -1,4 +1,4 @@
-const workerURL = '/terra-docs/js/full.render.js';
+const workerURL = '/js/full.render.js';
 let viz = new Viz({ workerURL });
 
 $(document).ready(function() {
