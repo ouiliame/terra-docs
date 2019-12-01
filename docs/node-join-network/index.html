@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Join a Network · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; See the [testnet repo](https://github.com/terra-project/networks) for information on the latest testnet, including the correct version of the Terra Core to use and details about the genesis file."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Join a Network · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.wcdc.me/"/><meta property="og:description" content="&gt; See the [testnet repo](https://github.com/terra-project/networks) for information on the latest testnet, including the correct version of the Terra Core to use and details about the genesis file."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:400,500,700&amp;display=swap"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer no-print"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc no-print"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>NODE SOFTWARE</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Overview<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/columbus3">Columbus-3 Mainnet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Terra Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-how-terra-works">How Terra Works</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-devguide">Developer Guide</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">MODULE SPECS</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-spec-auth">Auth</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-bank">Bank</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-supply">Supply</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-distribution">Distribution</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-staking">Staking</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-slashing">Slashing</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-oracle">Oracle</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-market">Market</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-governance">Governance</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">User Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">NODE SOFTWARE</h4><ul><li class="navListItem"><a class="navItem" href="/docs/node-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/node-users">User Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/node-light-client">Light Client Daemon</a></li><li class="navListItem"><a class="navItem" href="/docs/node-terracli">terracli Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/node-ledger-nano-support">Ledger Nano Support</a></li><li class="navListItem"><a class="navItem" href="/docs/node-production">Production Settings</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/node-join-network">Join a Network</a></li><li class="navListItem"><a class="navItem" href="/docs/node-deploy-testnet">Deploy a Testnet</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Validator Handbook<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/validator-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-faq">Validator FAQ</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">GUIDES</h4><ul><li class="navListItem"><a class="navItem" href="/docs/validator-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-security">Security Best Practices</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-oracle">Exchange Rate Oracle</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Contribute<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-contributing">Contribution guidelines for Terra Core</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-help-translate">Help to translate</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><img class="print-only" src="/img/docs_logo.svg"/><br/><header class="postHeader"><h1 class="postHeaderTitle">Join a Network</h1></header><article><div><span><blockquote class="info"><p>See the <a href="https://github.com/terra-project/networks">testnet repo</a> for information on the latest testnet, including the correct version of the Terra Core to use and details about the genesis file.</p>
+</blockquote>
+<blockquote class="note"><p>You need to <a href="/docs/node-installation">install terra</a> before going further.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="setting-up-a-new-node"></a><a href="#setting-up-a-new-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting Up a New Node</h2>
+<blockquote class="info"><p>If you ran a full node on a previous testnet, please skip to <a href="#upgrading-from-previous-testnet">Upgrading From Previous Testnet</a>.</p>
+</blockquote>
+<p>These instructions are for setting up a brand new full node from scratch.</p>
+<p>First, initialize the node and create the necessary config files:</p>
+<pre><code class="hljs css language-bash">terrad init &lt;your_custom_moniker&gt;
+</code></pre>
+<blockquote class="note"><p>Monikers can only contain  ASCII characters.
+Using Unicode characters will render your node unreachable.</p>
+</blockquote>
+<p>You can edit this <code>moniker</code> later, in the <code>~/.terrad/config/config.toml</code> file:</p>
+<pre><code class="hljs css language-text"># A custom human readable name for this node
+moniker = "<your_custom_moniker>"
+</code></pre>
+<p>You can edit the <code>~/.terrad/config/terrad.toml</code> file in order to enable the anti spam mechanism and reject incoming transactions with less than a minimum fee:</p>
+<pre><code class="hljs css language-text"># This is a TOML config file.
+# For more information, see https://github.com/toml-lang/toml
+
+##### main base config options #####
+
+# Validators reject any tx from the mempool with less than the minimum fee per gas.
+minimum_fees = ""
+</code></pre>
+<p>Your full node has been initialized! Please skip to <a href="#genesis-and-seeds">Genesis &amp; Seeds</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="upgrading-from-previous-testnet"></a><a href="#upgrading-from-previous-testnet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upgrading From Previous Testnet</h2>
+<p>These instructions are for full nodes that have ran on previous testnets and would like to upgrade to the latest testnet.</p>
+<h3><a class="anchor" aria-hidden="true" id="reset-data"></a><a href="#reset-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reset Data</h3>
+<p>First, remove the outdated files and reset the data.</p>
+<pre><code class="hljs css language-bash">rm <span class="hljs-variable">$HOME</span>/.terrad/config/addrbook.json <span class="hljs-variable">$HOME</span>/.terrad/config/genesis.json
+terrad unsafe-reset-all
+</code></pre>
+<p>Your node is now in a pristine state while keeping the original <code>priv_validator.json</code> and <code>config.toml</code>. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.</p>
+<blockquote class="danger"><p>Make sure that every node has a unique <code>priv_validator.json</code>.</p>
+<p>Do not copy the <code>priv_validator.json</code> from an old node to multiple new nodes.</p>
+<p>Running two nodes with the same <code>priv_validator.json</code> will cause you to double sign.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="software-upgrade"></a><a href="#software-upgrade" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software Upgrade</h3>
+<p>Now it is time to upgrade the software. Go to the project directory, and run:</p>
+<pre><code class="hljs css language-bash">git checkout master &amp;&amp; git pull
+make
+</code></pre>
+<blockquote class="info"><p>If you have issues at this step, please check that you have the latest stable version of GO installed.</p>
+</blockquote>
+<p>Note we use <code>master</code> here since it contains the latest stable release. See the <a href="https://github.com/terra-project/networks">testnet repo</a> for details on which version is needed for which testnet, and the <a href="https://github.com/terra-project/core//releases">SDK release page</a> for details on each release.</p>
+<p>Your full node has been cleanly upgraded!</p>
+<h2><a class="anchor" aria-hidden="true" id="genesis-seeds"></a><a href="#genesis-seeds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Genesis &amp; Seeds</h2>
+<h3><a class="anchor" aria-hidden="true" id="copy-the-genesis-file"></a><a href="#copy-the-genesis-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Copy the Genesis File</h3>
+<p>Fetch the testnet's <code>genesis.json</code> file into <code>terrad</code>'s config directory.</p>
+<pre><code class="hljs css language-bash">mkdir -p <span class="hljs-variable">$HOME</span>/.terrad/config
+curl https://raw.githubusercontent.com/terra-project/launch/master/genesis.json &gt; <span class="hljs-variable">$HOME</span>/.terrad/config/genesis.json
+</code></pre>
+<p>Note we use the <code>latest</code> directory in the <a href="https://github.com/terra-project/networks">networks repo</a> which contains details for the latest testnet. If you are connecting to a different testnet, ensure you get the right files.</p>
+<p>To verify the correctness of the configuration run:</p>
+<pre><code class="hljs css language-bash">terrad start
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="add-seed-nodes"></a><a href="#add-seed-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Seed Nodes</h3>
+<p>Your node needs to know how to find peers. You'll need to add healthy seed nodes to <code>$HOME/.terrad/config/config.toml</code>. The <code>testnets</code> repo contains links to the seed nodes for each testnet. If you are looking to join the running testnet please <a href="https://github.com/terra-project/networks">check the repository for details</a> on which nodes to use.</p>
+<p>If those seeds aren't working, you can find more seeds and persistent peers on the <a href="https://station.terra.money">Terra Station</a>. Open the the <code>Full Nodes</code> pane and select nodes that do not have private (<code>10.x.x.x</code>) or <a href="https://en.wikipedia.org/wiki/Private_network">local IP addresses</a>. The <code>Persistent Peer</code> field contains the connection string. For best results use 4-6.</p>
+<p>For more information on seeds and peers, you can <a href="https://github.com/tendermint/tendermint/blob/develop/docs/tendermint-core/using-tendermint.md#peers">read this</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="run-a-full-node"></a><a href="#run-a-full-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run a Full Node</h2>
+<p>Start the full node with this command:</p>
+<pre><code class="hljs css language-bash">terrad start
+</code></pre>
+<p>Check that everything is running smoothly:</p>
+<pre><code class="hljs css language-bash">terracli status
+</code></pre>
+<p>View the status of the network with the <a href="https://finder.terra.money">Terra Finder</a>. Once your full node syncs up to the current block height, you should see it appear on the <a href="https://terra.stake.id/">list of full nodes</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="export-state"></a><a href="#export-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export State</h2>
+<p>Terra can dump the entire application state to a JSON file, which could be useful for manual analysis and can also be used as the genesis file of a new network.</p>
+<p>Export state with:</p>
+<pre><code class="hljs css language-bash">terrad <span class="hljs-built_in">export</span> &gt; [filename].json
+</code></pre>
+<p>You can also export state from a particular height (at the end of processing the block of that height):</p>
+<pre><code class="hljs css language-bash">terrad <span class="hljs-built_in">export</span> --height [height] &gt; [filename].json
+</code></pre>
+<p>If you plan to start a new network from the exported state, export with the <code>--for-zero-height</code> flag:</p>
+<pre><code class="hljs css language-bash">terrad <span class="hljs-built_in">export</span> --height [height] --<span class="hljs-keyword">for</span>-zero-height &gt; [filename].json
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="upgrade-to-validator-node"></a><a href="#upgrade-to-validator-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upgrade to Validator Node</h2>
+<p>You now have an active full node. What's the next step? You can upgrade your full node to become a Terra Validator. The top 100 validators have the ability to propose new blocks to the Terra network. Continue onto <a href="/docs/validator-getting-started">the Validator Setup</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/1/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/node-production"><span class="arrow-prev">← </span><span>Production Settings</span></a><a class="docs-next button" href="/docs/node-deploy-testnet"><span>Deploy a Testnet</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#setting-up-a-new-node">Setting Up a New Node</a></li><li><a href="#upgrading-from-previous-testnet">Upgrading From Previous Testnet</a><ul class="toc-headings"><li><a href="#reset-data">Reset Data</a></li><li><a href="#software-upgrade">Software Upgrade</a></li></ul></li><li><a href="#genesis-seeds">Genesis &amp; Seeds</a><ul class="toc-headings"><li><a href="#copy-the-genesis-file">Copy the Genesis File</a></li><li><a href="#add-seed-nodes">Add Seed Nodes</a></li></ul></li><li><a href="#run-a-full-node">Run a Full Node</a></li><li><a href="#export-state">Export State</a></li><li><a href="#upgrade-to-validator-node">Upgrade to Validator Node</a></li></ul></nav></div><footer class="nav-footer no-print" id="footer"><section class="sitemap"><a href="https://terra.money" class="nav-home"><img src="/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '5957091e293f7b97f2994bde312aed99',
+                indexName: 'terra-project',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en"]}
+              });
+            </script></body></html>

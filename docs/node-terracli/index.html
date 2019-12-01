@@ -1,0 +1,701 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>terracli Reference · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="For more information on the command usage, refer to its help screen: `terracli config --help`."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="terracli Reference · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.wcdc.me/"/><meta property="og:description" content="For more information on the command usage, refer to its help screen: `terracli config --help`."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:400,500,700&amp;display=swap"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer no-print"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc no-print"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>NODE SOFTWARE</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Overview<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/columbus3">Columbus-3 Mainnet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Terra Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-how-terra-works">How Terra Works</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-devguide">Developer Guide</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">MODULE SPECS</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-spec-auth">Auth</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-bank">Bank</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-supply">Supply</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-distribution">Distribution</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-staking">Staking</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-slashing">Slashing</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-oracle">Oracle</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-market">Market</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-governance">Governance</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">User Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">NODE SOFTWARE</h4><ul><li class="navListItem"><a class="navItem" href="/docs/node-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/node-users">User Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/node-light-client">Light Client Daemon</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/node-terracli">terracli Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/node-ledger-nano-support">Ledger Nano Support</a></li><li class="navListItem"><a class="navItem" href="/docs/node-production">Production Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/node-join-network">Join a Network</a></li><li class="navListItem"><a class="navItem" href="/docs/node-deploy-testnet">Deploy a Testnet</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Validator Handbook<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/validator-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-faq">Validator FAQ</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">GUIDES</h4><ul><li class="navListItem"><a class="navItem" href="/docs/validator-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-security">Security Best Practices</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-oracle">Exchange Rate Oracle</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Contribute<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-contributing">Contribution guidelines for Terra Core</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-help-translate">Help to translate</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><img class="print-only" src="/img/docs_logo.svg"/><br/><header class="postHeader"><h1 class="postHeaderTitle">terracli Reference</h1></header><article><div><span><p>For more information on the command usage, refer to its help screen: <code>terracli config --help</code>.</p>
+<p>Here is a list of useful <code>terracli</code> commands, including usage examples.</p>
+<h2><a class="anchor" aria-hidden="true" id="keys"></a><a href="#keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keys</h2>
+<h3><a class="anchor" aria-hidden="true" id="key-representations"></a><a href="#key-representations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Key Representations</h3>
+<p>Every Terra account is associated with different key representations, which can be deterministically generated from the account's private key.</p>
+<ul><li><p><strong>Address</strong>: <code>terra</code></p>
+<ul><li>This is the address you give to others in order to receive funds.</li>
+<li>View this value (and its public key) with <code>terracli keys show &lt;account_name&gt;</code></li>
+<li>e.g. <code>terra15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc</code></li>
+</ul></li>
+<li><p><strong>Validator Operator Address</strong>: <code>terravaloper</code></p>
+<ul><li>This is the address that identifies a validator's operator (the holder of the Terra account) and is used to invoke staking commands.</li>
+<li>View this value (and its public key) with <code>terracli keys show &lt;account_name&gt; --bech=val</code></li>
+<li>e.g. <code>terravaloper1carzvgq3e6y3z5kz5y6gxp3wpy3qdrv928vyah</code></li>
+</ul></li>
+</ul>
+<p>There are also keys that belong to the node, used to identify the node itself rather than the operator that runs the node.</p>
+<ul><li><strong>Validator Node Public Key</strong> <code>terravalconspub</code>
+<ul><li>Generated when the node is created with <code>terrad init</code>, and is the Tendermint signing key.</li>
+<li>View this value with <code>terrad tendermint show-validator</code></li>
+<li>e.g. <code>terravalconspub1zcjduepq0ms2738680y72v44tfyqm3c9ppduku8fs6sr73fx7m666sjztznqzp2emf</code></li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="generate-keys"></a><a href="#generate-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generate Keys</h3>
+<p>You'll need an account private and public key pair (a.k.a. <code>sk, pk</code> respectively) to be able to receive funds, send txs, bond tx, etc.</p>
+<p>To generate a new <em>secp256k1</em> key:</p>
+<pre><code class="hljs css language-bash">terracli keys add &lt;account_name&gt;
+</code></pre>
+<p>Next, you will have to create a passphrase to protect the key on disk. The output of the above command will contain a <em>seed phrase</em>. It is recommended to save the <em>seed phrase</em> in a safe place so that in case you forget the password, you could eventually regenerate the key from the seed phrase with the following command:</p>
+<pre><code class="hljs css language-bash">terracli keys add --recover
+</code></pre>
+<p>If you check your private keys, you'll now see <code>&lt;account_name&gt;</code>:</p>
+<pre><code class="hljs css language-bash">terracli keys show &lt;account_name&gt;
+</code></pre>
+<p>View the validator operator's address via:</p>
+<pre><code class="hljs css language-text">terracli keys show <account_name> --bech=val
+</code></pre>
+<p>You can see all your available keys by typing:</p>
+<pre><code class="hljs css language-bash">terracli keys list
+</code></pre>
+<p>View the validator pubkey for your node by typing:</p>
+<pre><code class="hljs css language-bash">terrad tendermint show-validator
+</code></pre>
+<p>Note that this is the Tendermint signing key, <em>not</em> the operator key you will use in delegation transactions.</p>
+<blockquote class="warning"><p>We strongly recommend <strong>NOT</strong> using the same passphrase for multiple keys.
+The Terra team will not be responsible for the loss of funds.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="generate-multisig-public-keys"></a><a href="#generate-multisig-public-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generate Multisig Public Keys</h3>
+<p>You can generate and print a multisig public key by typing:</p>
+<pre><code class="hljs css language-bash">terracli keys add --multisig=name1,name2,name3[...] --multisig-threshold=K new_key_name
+</code></pre>
+<p><code>K</code> is the minimum number of private keys that must have signed the transactions that carry the public key's address as signer.</p>
+<p>The <code>--multisig</code> flag must contain the name of public keys that will be combined into a public key that will be generated and stored as <code>new_key_name</code> in the local database. All names supplied through <code>--multisig</code> must already exist in the local database. Unless the flag <code>--nosort</code> is set, the order in which the keys are supplied on the command line does not matter, i.e. the following commands generate two identical keys:</p>
+<pre><code class="hljs css language-bash">terracli keys add --multisig=foo,bar,baz --multisig-threshold=2 multisig_address
+terracli keys add --multisig=baz,foo,bar --multisig-threshold=2 multisig_address
+</code></pre>
+<p>Multisig addresses can also be generated on-the-fly and printed through the which command:</p>
+<pre><code class="hljs css language-bash">terracli keys show --multisig-threshold=K name1 name2 name3 [...]
+</code></pre>
+<p>For more information regarding how to generate, sign and broadcast transactions with a multi signature account see <a href="#multisig-transactions">Multisig Transactions</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="fees"></a><a href="#fees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fees</h2>
+<h3><a class="anchor" aria-hidden="true" id="fees-gas"></a><a href="#fees-gas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fees &amp; Gas</h3>
+<p>Each transaction may either supply fees or gas prices, but not both. Most users will typically provide fees as this is the cost you will end up incurring for the transaction being included in the ledger.</p>
+<p>Validator's have a minimum gas price (multi-denom) configuration and they use this value when determining if they should include the transaction in a block during <code>CheckTx</code>, where <code>gasPrices &gt;= minGasPrices</code>. Note, your transaction must supply fees that are greater than or equal to <strong>any</strong> of the denominations the validator requires.</p>
+<blockquote class="note"><p>With such a mechanism in place, validators may start to prioritize txs by <code>gasPrice</code> in the mempool, so providing higher fees or gas prices may yield higher tx priority.</p>
+</blockquote>
+<p>e.g.</p>
+<pre><code class="hljs css language-bash">terracli tx send ... --fees=100usdr
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-bash">terracli tx send ... --gas-prices=0.000001usdr
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="fees-taxes-from-columbus-3"></a><a href="#fees-taxes-from-columbus-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fees &amp; Taxes (From Columbus-3)</h3>
+<p>The tax has been changed to be included in the fees rather than automatically charged from the sender account. Users can make transaction with existing method without fees flag but with gas prices flag. It will automatically calculate tax and return fees in addition to the existing gas fees.</p>
+<p>Wallet providers can estimate fees and gas to be incurred by a transaction by querying the endpoint <code>/txs/esitimate_fee</code> with <code>gas = auto</code>.</p>
+<p>e.g.</p>
+<pre><code class="hljs css language-bash">terracli tx send ... --gas-prices=0.000001usdr --gas=auto --gas-adjustment=1.4
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-bash">terracli tx estimate-fee ... --gas-prices=0.000001usdr --gas=auto --gas-adjustment=1.4
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="account"></a><a href="#account" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Account</h2>
+<h3><a class="anchor" aria-hidden="true" id="get-tokens"></a><a href="#get-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Tokens</h3>
+<p>The best way to get tokens is from the <a href="https://faucet.terra.money">Terra Testnet Faucet</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="query-account-balance"></a><a href="#query-account-balance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Account Balance</h3>
+<p>After receiving tokens to your address, you can view your account's balance by typing:</p>
+<pre><code class="hljs css language-bash">terracli query account &lt;account_terra&gt;
+</code></pre>
+<blockquote class="important"><p>When you query an account balance with zero tokens, you will get this error:</p>
+<p><code>No account with address &lt;account_terra&gt; was found in the state</code>.</p>
+<p>This can also happen if you fund the account before your node has fully synced with the chain.
+Both cases are to be expected.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="send-tokens"></a><a href="#send-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Send Tokens</h2>
+<p>The following command could be used to send coins from one account to another:</p>
+<pre><code class="hljs css language-bash">terracli tx send \
+  &lt;from_key_or_address&gt; \
+  &lt;to_address&gt; \
+  &lt;coins&gt; \
+  --chain-id=&lt;chain_id&gt; \
+</code></pre>
+<p>where <code>to_address</code> is a key matching the format: <code>terra1dp0taj85ruc299rkdvzp4z5pfg6z6swaed74e6</code></p>
+<blockquote class="important"><p>The <code>&lt;coins&gt;</code> paramter is of the format <code>&lt;value|coin_name&gt;</code>.</p>
+<p>The <code>&lt;from_key_or_address&gt;</code> accepts both the key name and the address as the value, but only accepts &gt; addresses when the <code>--generate-only</code> flag is used.</p>
+</blockquote>
+<blockquote class="tip"><p>You may want to cap the maximum gas that can be consumed by the transaction via the <code>--gas</code> flag.</p>
+<p>If you pass <code>--gas=auto</code>, the gas will be automatically estimated before executing the transaction.</p>
+<p>Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully.</p>
+<p>The adjustment can be controlled via the <code>--gas-adjustment</code> flag, whose default value is 1.0.</p>
+</blockquote>
+<p>Now, view the updated balances of the origin and destination accounts:</p>
+<pre><code class="hljs css language-bash">terracli query account &lt;account_terra&gt;
+terracli query account &lt;destination_terra&gt;
+</code></pre>
+<p>You can also check your balance at a given block by using the <code>--height</code> flag:</p>
+<pre><code class="hljs css language-bash">terracli query account &lt;account_terra&gt; --height=&lt;block_height&gt;
+</code></pre>
+<p>You can simulate a transaction without actually broadcasting it by appending the <code>--dry-run</code> flag to the command line:</p>
+<pre><code class="hljs css language-bash">terracli tx send \
+  &lt;from_key_or_address&gt; \
+  &lt;to_address&gt; \
+  &lt;coins&gt; \
+  --chain-id=&lt;chain_id&gt; \
+  --dry-run
+</code></pre>
+<p>Furthermore, you can build a transaction and print its JSON format to STDOUT by appending <code>--generate-only</code> to the list of the command line arguments:</p>
+<pre><code class="hljs css language-bash">terracli tx send \
+  &lt;from_key_or_address&gt; \
+  &lt;to_address&gt; \
+  &lt;coins&gt; \
+  --chain-id=&lt;chain_id&gt; \
+  --generate-only &gt; unsignedSendTx.json
+</code></pre>
+<pre><code class="hljs css language-bash">terracli tx sign \
+  --chain-id=&lt;chain_id&gt; \
+  --from=&lt;key_name&gt; \
+  unsignedSendTx.json &gt; signedSendTx.json
+</code></pre>
+<p>You can validate the transaction's signatures by typing the following:</p>
+<pre><code class="hljs css language-bash">terracli tx sign --validate-signatures signedSendTx.json
+</code></pre>
+<p>You can broadcast the signed transaction to a node by providing the JSON file to the following command:</p>
+<pre><code class="hljs css language-bash">terracli tx broadcast --node=&lt;node&gt; signedSendTx.json
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="query-transactions"></a><a href="#query-transactions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Transactions</h2>
+<h3><a class="anchor" aria-hidden="true" id="matching-a-set-of-tags"></a><a href="#matching-a-set-of-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Matching a set of tags</h3>
+<p>You can use the transaction search command to query for transactions that match a specific set of <code>tags</code>, which are added on every transaction.</p>
+<p>Each tag is conformed by a key-value pair in the form of <code>&lt;tag&gt;:&lt;value&gt;</code>. Tags can also be combined to query for a more specific result using the <code>&amp;</code> symbol.</p>
+<p>The command for querying transactions using a <code>tag</code> is the following:</p>
+<pre><code class="hljs css language-bash">terracli query txs --tags=<span class="hljs-string">'&lt;tag&gt;:&lt;value&gt;'</span>
+</code></pre>
+<p>And for using multiple <code>tags</code>:</p>
+<pre><code class="hljs css language-bash">terracli query txs --tags=<span class="hljs-string">'&lt;tag1&gt;:&lt;value1&gt;&amp;&lt;tag2&gt;:&lt;value2&gt;'</span>
+</code></pre>
+<p>The pagination is supported as well via <code>page</code> and <code>limit</code>:</p>
+<pre><code class="hljs css language-bash">terracli query txs --tags=<span class="hljs-string">'&lt;tag&gt;:&lt;value&gt;'</span> --page=1 --<span class="hljs-built_in">limit</span>=20
+</code></pre>
+<blockquote class="tip"><p>The action tag always equals the message type returned by the <code>Type()</code> function of the relevant message.
+You can find a list of available <code>tags</code> on each module by looking at the /tags directory of each module.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="matching-a-transactions-hash"></a><a href="#matching-a-transactions-hash" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Matching a transaction's hash</h3>
+<p>You can also query a single transaction by its hash using the following command:</p>
+<pre><code class="hljs css language-bash">terracli query tx [<span class="hljs-built_in">hash</span>]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="slashing"></a><a href="#slashing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slashing</h2>
+<h3><a class="anchor" aria-hidden="true" id="unjailing"></a><a href="#unjailing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unjailing</h3>
+<p>To unjail your jailed validator</p>
+<pre><code class="hljs css language-bash">terracli tx slashing unjail --from=&lt;validator-operator-addr&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="signing-info"></a><a href="#signing-info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signing Info</h3>
+<p>To retrieve a validator's signing info:</p>
+<pre><code class="hljs css language-bash">terracli query slashing signing-info &lt;validator-pubkey&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-parameters"></a><a href="#query-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Parameters</h3>
+<p>You can get the current slashing parameters via:</p>
+<pre><code class="hljs css language-bash">terracli query slashing params
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="staking"></a><a href="#staking" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Staking</h2>
+<h3><a class="anchor" aria-hidden="true" id="set-up-a-validator"></a><a href="#set-up-a-validator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set up a Validator</h3>
+<p>Please refer to the <a href="/docs/validator-getting-started">Validator Setup</a> section for a more complete guide on how to set up a validator-candidate.</p>
+<h3><a class="anchor" aria-hidden="true" id="delegate-to-a-validator"></a><a href="#delegate-to-a-validator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delegate to a Validator</h3>
+<p>On the upcoming mainnet, you can delegate LUNA to a validator. These <a href="/docs/validator-faq">delegators</a> can receive part of the validator's fee revenue.</p>
+<p><strong>Query Validators</strong></p>
+<p>You can query the list of all validators of a specific chain:</p>
+<pre><code class="hljs css language-bash">terracli query staking validators
+</code></pre>
+<p>If you want to get the information of a single validator you can check it with:</p>
+<pre><code class="hljs css language-bash">terracli query staking validator &lt;account_terraval&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="bond-tokens"></a><a href="#bond-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bond Tokens</h3>
+<p>On the testnet, we delegate LUNA. Here's how you can bond tokens to a testnet validator (<em>i.e.</em> delegate):</p>
+<pre><code class="hljs css language-bash">terracli tx staking delegate \
+  &lt;validator address&gt; \
+  10000000uluna \
+  --from=&lt;key_name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p><code>&lt;validator&gt;</code> is the operator address of the validator to which you intend to delegate. If you are running a local testnet, you can find this with:</p>
+<pre><code class="hljs css language-bash">terracli keys show &lt;name&gt; --bech val
+</code></pre>
+<p>where <code>&lt;name&gt;</code> is the name of the key you specified when you initialized <code>terrad</code>.</p>
+<p>While tokens are bonded, they are pooled with all the other bonded tokens in the network. Validators and delegators obtain a percentage of shares that equal their stake in this pool.</p>
+<blockquote class="tip"><p>Don't use more LUNA than you have! You can always get more by using the <a href="https://faucet.terra.money/">Faucet</a>!</p>
+</blockquote>
+<p><strong>Query Delegations</strong></p>
+<p>Once submitted a delegation to a validator, you can see it's information by using the following command:</p>
+<pre><code class="hljs css language-bash">terracli query staking delegation &lt;delegator_address&gt; &lt;validator_address&gt;
+</code></pre>
+<p>Or if you want to check all your current delegations with disctinct validators:</p>
+<pre><code class="hljs css language-bash">terracli query staking delegations &lt;delegator_address&gt;
+</code></pre>
+<p>You can also get previous delegation(s) status by adding the <code>--height</code> flag.</p>
+<h3><a class="anchor" aria-hidden="true" id="unbond-tokens"></a><a href="#unbond-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unbond Tokens</h3>
+<p>If for any reason the validator misbehaves, or you just want to unbond a certain
+amount of tokens, use this following command.</p>
+<pre><code class="hljs css language-bash">terracli tx staking unbond \
+  &lt;validator_address&gt; \
+  100uluna \
+  --from=&lt;key_name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>The unbonding will be automatically completed when the unbonding period has passed.</p>
+<p><strong>Query Unbonding-Delegations</strong></p>
+<p>Once you begin an unbonding-delegation, you can see it's information by using the following command:</p>
+<pre><code class="hljs css language-bash">terracli query staking unbonding-delegation &lt;delegator_address&gt; &lt;validator_address&gt;
+</code></pre>
+<p>Or if you want to check all your current unbonding-delegations with disctinct validators:</p>
+<pre><code class="hljs css language-bash">terracli query staking unbonding-delegations &lt;account_terra&gt;
+</code></pre>
+<p>Additionally, as you can get all the unbonding-delegations from a particular validator:</p>
+<pre><code class="hljs css language-bash">terracli query staking unbonding-delegations-from &lt;account_terraval&gt;
+</code></pre>
+<p>To get previous unbonding-delegation(s) status on past blocks, try adding the <code>--height</code> flag.</p>
+<h3><a class="anchor" aria-hidden="true" id="redelegate-tokens"></a><a href="#redelegate-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redelegate Tokens</h3>
+<p>A redelegation is a type delegation that allows you to bond illiquid tokens from one validator to another:</p>
+<pre><code class="hljs css language-bash">terracli tx staking redelegate \
+  &lt;src validator address&gt; \
+  &lt;dst validator address&gt; \
+  &lt;amount&gt; \
+  --from=&lt;key_name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>The redelegation will be automatically completed when the unbonding period has passed.</p>
+<p><strong>Query Redelegations</strong></p>
+<p>Once you begin an redelegation, you can see it's information by using the following command:</p>
+<pre><code class="hljs css language-bash">terracli query staking redelegation &lt;delegator_address&gt; &lt;src_val_addr&gt; &lt;dst_val_addr&gt;
+</code></pre>
+<p>Or if you want to check all your current unbonding-delegations with disctinct validators:</p>
+<pre><code class="hljs css language-bash">terracli query staking redelegations &lt;account_terra&gt;
+</code></pre>
+<p>Additionally, as you can get all the outgoing redelegations from a particular validator:</p>
+<pre><code class="hljs css language-bash">  terracli query staking redelegations-from &lt;account_terraval&gt;
+</code></pre>
+<p>To get previous redelegation(s) status on past blocks, try adding the <code>--height</code> flag.</p>
+<h3><a class="anchor" aria-hidden="true" id="query-parameters-1"></a><a href="#query-parameters-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Parameters</h3>
+<p>Parameters define high level settings for staking. You can get the current values by using:</p>
+<pre><code class="hljs css language-bash">terracli query staking params
+</code></pre>
+<p>With the above command you will get the values for:</p>
+<ul><li>Unbonding time</li>
+<li>Maximum numbers of validators</li>
+<li>Coin denomination for staking</li>
+</ul>
+<p>All these values will be subject to updates though a <code>governance</code> process by <code>ParameterChange</code> proposals.</p>
+<h3><a class="anchor" aria-hidden="true" id="query-pool"></a><a href="#query-pool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Pool</h3>
+<p>A staking <code>Pool</code> defines the dynamic parameters of the current state. You can query them with the following command:</p>
+<pre><code class="hljs css language-bash">terracli query staking pool
+</code></pre>
+<p>With the <code>pool</code> command you will get the values for:</p>
+<ul><li>Not-bonded and bonded tokens</li>
+<li>Token supply</li>
+<li>Current annual inflation and the block in which the last inflation was processed</li>
+<li>Last recorded bonded shares</li>
+</ul>
+<p><strong>Query Delegations To Validator</strong></p>
+<p>You can also query all of the delegations to a particular validator:</p>
+<pre><code class="hljs css language-bash">  terracli query delegations-to &lt;account_terraval&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="governance"></a><a href="#governance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Governance</h2>
+<h3><a class="anchor" aria-hidden="true" id="create-a-proposal"></a><a href="#create-a-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Proposal</h3>
+<p>In order to create a governance proposal, you must submit an initial deposit along with a title and description. You may also provide the proposal directly through the <code>--proposal</code> flag which points to a JSON file containing the proposal.</p>
+<h4><a class="anchor" aria-hidden="true" id="text-proposals"></a><a href="#text-proposals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Proposals</h4>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal \
+  --title=&lt;title&gt; \
+  --description=&lt;description&gt; \
+  --<span class="hljs-built_in">type</span>=<span class="hljs-string">"Text"</span> \
+  --deposit=<span class="hljs-string">"1000000uluna"</span> \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="parameter-change-proposals"></a><a href="#parameter-change-proposals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameter Change Proposals</h4>
+<p>To submit a parameter change proposal, it is highly recommended to pass in the proposal as a JSON file as its
+contents are less friendly to command-line input.</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal param-change &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> is a file with the following schema:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Param Change"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Update max validators"</span>,
+  <span class="hljs-attr">"changes"</span>: [
+    {
+      <span class="hljs-attr">"subspace"</span>: <span class="hljs-string">"staking"</span>,
+      <span class="hljs-attr">"key"</span>: <span class="hljs-string">"MaxValidators"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-number">105</span>
+    }
+  ],
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000000"</span>
+    }
+  ]
+}
+</code></pre>
+<blockquote class="warning"><p>Currently parameter changes are <em>evaluated</em> but not <em>validated</em>, so it is very important
+that any <code>value</code> change is valid (ie. correct type and within bounds) for its
+respective parameter, eg. <code>MaxValidators</code> should be an integer and not a decimal.</p>
+<p>Proper vetting of a parameter change proposal should prevent this from happening
+(no deposits should occur during the governance process), but it should be noted
+regardless.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="community-pool-spend-proposal"></a><a href="#community-pool-spend-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Community-Pool Spend Proposal</h4>
+<p>To submit a community-pool spend proposal, it is highly recommended to pass in the proposal as a JSON file as its
+contents are less friendly to command-line input.</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal community-pool-spend &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Community Pool Spend"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Pay me some Lunas!"</span>,
+  <span class="hljs-attr">"recipient"</span>: <span class="hljs-string">"terra1s5afhd6gxevu37mkqcvvsj8qeylhn0rzn7cdaq"</span>,
+  <span class="hljs-attr">"amount"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ],
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ]
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="tax-rate-and-reward-weight-update-proposals"></a><a href="#tax-rate-and-reward-weight-update-proposals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tax-Rate and Reward-Weight Update Proposals</h4>
+<p>Tax Rate and Reward Weight are important monetary policy levers handled by the <a href="/docs/dev-spec-treasury"><code>Treasury</code></a> module to modulate miner incentives toward stable demand and steady growth. Usually, they are automatically calibrated once per epoch by the protocol. However, they can be changed at any moment if enough an update proposal gets passed with enough supporters.</p>
+<p>To submit Tax Rate or Reward Weight update proposal, you must provide a proposal file as its contents are less friendly to CLI input:</p>
+<p>For Tax Rate:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal tax-rate-update &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Update Tax-Rate"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Let's update the tax-rate to 1.5%"</span>,
+  <span class="hljs-attr">"tax_rate"</span>: <span class="hljs-string">"0.015"</span>,
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ]
+}
+</code></pre>
+<p>For Reward Weight:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal reward-weight-update &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Update Reward Weight"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Let's update reward weight to 1.5%"</span>,
+  <span class="hljs-attr">"reward_weight"</span>: <span class="hljs-string">"0.015"</span>,
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ]
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="software-upgrade-proposals"></a><a href="#software-upgrade-proposals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software Upgrade Proposals</h4>
+<p>The <code>SoftwareUpgrade</code> is <strong>currently not supported</strong> as it has not yet been implemented and currently does not differ from the semantics of a <code>Text</code> proposal.</p>
+<h3><a class="anchor" aria-hidden="true" id="query-proposals"></a><a href="#query-proposals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Proposals</h3>
+<p>Once created, you can now query information of the proposal:</p>
+<pre><code class="hljs css language-bash">terracli query gov proposal &lt;proposal_id&gt;
+</code></pre>
+<p>Or query all available proposals:</p>
+<pre><code class="hljs css language-bash">terracli query gov proposals
+</code></pre>
+<p>You can also query proposals filtered by <code>voter</code> or <code>depositor</code> by using the corresponding flags.</p>
+<p>To query for the proposer of a given governance proposal:</p>
+<pre><code class="hljs css language-bash">terracli query gov proposer &lt;proposal_id&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="increase-deposit"></a><a href="#increase-deposit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Increase Deposit</h3>
+<p>In order for a proposal to be broadcasted to the network, the amount deposited must be above a <code>minDeposit</code> value (initial value: <code>512000000uluna</code>). If the proposal you previously created didn't meet this requirement, you can still increase the total amount deposited to activate it. Once the minimum deposit is reached, the proposal enters voting period:</p>
+<pre><code class="hljs css language-bash">terracli tx gov deposit &lt;proposal_id&gt; <span class="hljs-string">"10000000luluna"</span> \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<blockquote><p><em>NOTE</em>: Proposals that don't meet this requirement will be deleted after <code>MaxDepositPeriod</code> is reached.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="query-deposits"></a><a href="#query-deposits" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Deposits</h3>
+<p>Once a new proposal is created, you can query all the deposits submitted to it:</p>
+<pre><code class="hljs css language-bash">terracli query gov deposits &lt;proposal_id&gt;
+</code></pre>
+<p>You can also query a deposit submitted by a specific address:</p>
+<pre><code class="hljs css language-bash">terracli query gov deposit &lt;proposal_id&gt; &lt;depositor_address&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="vote-on-a-proposal"></a><a href="#vote-on-a-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vote on a Proposal</h3>
+<p>After a proposal's deposit reaches the <code>MinDeposit</code> value, the voting period opens. Bonded LUNA holders can then cast vote on it:</p>
+<pre><code class="hljs css language-bash">terracli tx gov vote &lt;proposal_id&gt; &lt;Yes/No/NoWithVeto/Abstain&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-votes"></a><a href="#query-votes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Votes</h3>
+<p>Check the vote with the option you just submitted:</p>
+<pre><code class="hljs css language-bash">terracli query gov vote &lt;proposal_id&gt; &lt;voter_address&gt;
+</code></pre>
+<p>You can also get all the previous votes submitted to the proposal with:</p>
+<pre><code class="hljs css language-bash">terracli query gov votes &lt;proposal_id&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-proposal-tally-results"></a><a href="#query-proposal-tally-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Proposal Tally Results</h3>
+<p>To check the current tally of a given proposal you can use the <code>tally</code> command:</p>
+<pre><code class="hljs css language-bash">terracli query gov tally &lt;proposal_id&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-governance-parameters"></a><a href="#query-governance-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Governance Parameters</h3>
+<p>To check the current governance parameters run:</p>
+<pre><code class="hljs css language-bash">terracli query gov params
+</code></pre>
+<p>To query subsets of the governance parameters run:</p>
+<pre><code class="hljs css language-bash">terracli query gov param voting
+terracli query gov param tallying
+terracli query gov param deposit
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="distribution"></a><a href="#distribution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Distribution</h2>
+<h3><a class="anchor" aria-hidden="true" id="query-distribution-parameters"></a><a href="#query-distribution-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Distribution Parameters</h3>
+<p>To check the current distribution parameters, run:</p>
+<pre><code class="hljs css language-bash">terracli query distribution params
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-community-pool-coins"></a><a href="#query-community-pool-coins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Community Pool Coins</h3>
+<p>To query all coins in the Community Pool, which is under Governance control:</p>
+<pre><code class="hljs css language-bash">terracli query distribution community-pool
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-outstanding-rewards"></a><a href="#query-outstanding-rewards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Outstanding Rewards</h3>
+<p>To check the current outstanding (un-withdrawn) rewards, run:</p>
+<pre><code class="hljs css language-bash">terracli query distribution outstanding-rewards
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-validator-commission"></a><a href="#query-validator-commission" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Validator Commission</h3>
+<p>To check the current outstanding commission for a validator, run:</p>
+<pre><code class="hljs css language-bash">terracli query distribution commission &lt;validator_address&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-validator-slashes"></a><a href="#query-validator-slashes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Validator Slashes</h3>
+<p>To check historical slashes for a validator, run:</p>
+<pre><code class="hljs css language-bash">terracli query distribution slashes &lt;validator_address&gt; &lt;start_height&gt; &lt;end_height&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-delegator-rewards"></a><a href="#query-delegator-rewards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Delegator Rewards</h3>
+<p>To check current rewards for a delegator (if they were to be withdrawn), run:</p>
+<pre><code class="hljs css language-bash">terracli query distribution rewards &lt;delegator_address&gt; &lt;validator_address&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-all-delegator-rewards"></a><a href="#query-all-delegator-rewards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query All Delegator Rewards</h3>
+<p>To check all current rewards for a delegator (if they were to be withdrawn), run:</p>
+<pre><code class="hljs css language-bash">terracli query distribution rewards &lt;delegator_address&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="multisig-transactions"></a><a href="#multisig-transactions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multisig Transactions</h2>
+<p>Multisig transactions require signatures of multiple private keys. Thus, generating and signing a transaction from a multisig account involve cooperation among the parties involved. A multisig transaction can be initiated by any of the key holders, and at least one of them would need to import other parties' public keys into their Keybase and generate a multisig public key in order to finalize and broadcast the transaction.</p>
+<p>For example, given a multisig key comprising the keys <code>p1</code>, <code>p2</code>, and <code>p3</code>, each of which is held by a distinct party, the user holding <code>p1</code> would require to import both <code>p2</code> and <code>p3</code> in order to generate the multisig account public key:</p>
+<pre><code class="hljs css language-text">terracli keys add \
+  p2 \
+  --pubkey=terrapub1addwnpepqtd28uwa0yxtwal5223qqr5aqf5y57tc7kk7z8qd4zplrdlk5ez5kdnlrj4
+
+terracli keys add \
+  p3 \
+  --pubkey=terrapub1addwnpepqgj04jpm9wrdml5qnss9kjxkmxzywuklnkj0g3a3f8l5wx9z4ennz84ym5t
+
+terracli keys add \
+  p1p2p3 \
+  --multisig-threshold=2 \
+  --multisig=p1,p2,p3
+</code></pre>
+<p>A new multisig public key <code>p1p2p3</code> has been stored, and its address will be used as signer of multisig transactions:</p>
+<pre><code class="hljs css language-bash">terracli keys show --address p1p2p3
+</code></pre>
+<p>You may also view multisig threshold, pubkey constituents and respective weights by viewing the JSON output of the key or passing the <code>--show-multisig</code> flag:</p>
+<pre><code class="hljs css language-bash">terracli keys show p1p2p3 -o json
+
+terracli keys show p1p2p3 --show-multisig
+</code></pre>
+<p>The first step to create a multisig transaction is to initiate it on behalf of the multisig address created above:</p>
+<pre><code class="hljs css language-bash">terracli tx send terra1570v2fq3twt0f0x02vhxpuzc9jc4yl30q2qned 10uluna \
+  --from=&lt;multisig_address&gt; \
+  --generate-only &gt; unsignedTx.json
+</code></pre>
+<p>The file <code>unsignedTx.json</code> contains the unsigned transaction encoded in JSON. <code>p1</code> can now sign the transaction with its own private key:</p>
+<pre><code class="hljs css language-bash">terracli tx sign \
+  unsignedTx.json \
+  --multisig=&lt;multisig_address&gt; \
+  --from=p1 \
+  --output-document=p1signature.json \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Once the signature is generated, <code>p1</code> transmits both <code>unsignedTx.json</code> and <code>p1signature.json</code> to <code>p2</code> or <code>p3</code>, which in turn will generate their respective signature:</p>
+<pre><code class="hljs css language-bash">terracli tx sign \
+  unsignedTx.json \
+  --multisig=&lt;multisig_address&gt; \
+  --from=p2 \
+  --output-document=p2signature.json \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p><code>p1p2p3</code> is a 2-of-3 multisig key, therefore one additional signature is sufficient. Any the key holders can now generate the multisig transaction by combining the required signature files:</p>
+<pre><code class="hljs css language-bash">terracli tx multisign \
+  unsignedTx.json \
+  p1p2p3 \
+  p1signature.json p2signature.json \
+  --output-document=signedTx.json \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>The transaction can now be sent to the node:</p>
+<pre><code class="hljs css language-bash">terracli tx broadcast signedTx.json \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="shell-auto-completion-scripts"></a><a href="#shell-auto-completion-scripts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shell Auto-completion Scripts</h2>
+<p>Auto-completion scripts for popular UNIX shell interpreters such as <code>bash</code> and <code>zsh</code> can be generated through the <code>completion</code> command, which is available for both <code>terrad</code> and <code>terracli</code>. This allows for a more convenient way to interact with the Terra Core endpoints when using the command-line.</p>
+<p>If you want to generate <code>bash</code> completion scripts run the following command:</p>
+<pre><code class="hljs css language-bash">terrad completion &gt; terrad_completion
+terracli completion &gt; terracli_completion
+</code></pre>
+<p>If you want to generate <code>zsh</code> completion scripts run the following command:</p>
+<pre><code class="hljs css language-bash">terrad completion --zsh &gt; terrad_completion
+terracli completion --zsh &gt; terracli_completion
+</code></pre>
+<blockquote class="note"><p>On most UNIX systems, such scripts may be loaded in <code>.bashrc</code> or <code>.bash_profile</code> to enable Bash autocompletion.</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">'. terrad_completion'</span> &gt;&gt; ~/.bashrc
+<span class="hljs-built_in">echo</span> <span class="hljs-string">'. terracli_completion'</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<p>Refer to the user's manual of your interpreter provided by your operating system for information on how to enable shell autocompletion.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="oracle"></a><a href="#oracle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Oracle</h2>
+<h3><a class="anchor" aria-hidden="true" id="submit-an-exchange-rate-vote"></a><a href="#submit-an-exchange-rate-vote" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Submit an Exchange Rate Vote</h3>
+<p>Validators must submit two exchange rate vote transactions to participate in the oracle; a <code>prevote</code> containing the hash of the actual vote in the first vote period, and a <code>vote</code> containing the salt of the hash submitted in the prevote phase to prove honestly. The hash is the leading 20 bytes of the SHA256 hexa string run over the string of the format <code>salt:price:denom:validator-address</code>.</p>
+<p>To submit a prevote, run:</p>
+<pre><code class="hljs css language-bash">terracli tx oracle prevote \
+  &lt;salt&gt; \ 
+  &lt;price&gt; \
+  &lt;validator_address&gt; \
+  --from mykey
+</code></pre>
+<p>After <code>VotePeriod</code> has expired from the submission of the prevote, the voter must submit the actual exchange rate vote. To do so, run:</p>
+<pre><code class="hljs css language-bash">terracli tx oracle vote \
+  &lt;salt&gt; \
+  &lt;price&gt;  \
+  &lt;validator_address&gt; \
+  --from mykey \
+  --validator &lt;validator-address&gt;
+</code></pre>
+<p>Where price is the form of Coin <code>8890.32ukrw</code></p>
+<p>Given that oracle votes have to be submitted in a feed over short time intervals (30 seconds), prevotes and votes will need to be submitted via some persistent server daemon, and not manually. For more information on how to do this, read the <a href="/docs/validator-oracle">Exchange Rate Oracle</a> section of the Validator Handbook, and the <a href="/docs/dev-spec-oracle">Oracle Module Specification</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="delegate-exchange-rate-voting-rights"></a><a href="#delegate-exchange-rate-voting-rights" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delegate Exchange Rate Voting Rights</h3>
+<p>A voter may also elect to delegate exchange rate voting to another signing key.</p>
+<pre><code class="hljs css language-bash">terracli tx oracle <span class="hljs-built_in">set</span>-feeder &lt;feeder_address&gt; --from=mykey
+</code></pre>
+<p>where <code>feeder_address</code> is the address you want to delegate your voting rights to. Note that the feeder will still need to submit votes on behalf of your validator in order for you to get credit.</p>
+<h2><a class="anchor" aria-hidden="true" id="market"></a><a href="#market" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Market</h2>
+<h3><a class="anchor" aria-hidden="true" id="swap-currencies"></a><a href="#swap-currencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Swap Currencies</h3>
+<p>All currencies in the Terra ecosystem can be instantly swapped into another at the effective oracle exchange rate. To swap one currency for another, run:</p>
+<pre><code class="hljs css language-bash">terracli tx market swap &lt;offer_coin&gt; &lt;ask_denom&gt;
+</code></pre>
+<p>Where <code>offer_coin</code> is the coin looking to be traded and <code>ask_denom</code> the denomination of the coin to be swapped into.</p>
+<p>For Terra&lt;&gt;Luna swaps, Constant-Product spread pricing model is enforced to limit consensus-related attack vectors. Terra&lt;&gt;Terra swaps have a constant Tobin Tax (0.3%).</p>
+<h3><a class="anchor" aria-hidden="true" id="query-swap-currencies"></a><a href="#query-swap-currencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Swap Currencies</h3>
+<p>The Market module also allows you determine the result from a swap operation without actually executing the swap. To simulate a swap operation, run:</p>
+<pre><code class="hljs css language-bash">terracli query market swap &lt;offer_coin&gt; &lt;ask_denom&gt;
+</code></pre>
+<p>Where <code>offer_coin</code> is the coin looking to be traded and <code>ask_denom</code> the denomination of the coin to be swapped into.</p>
+<h2><a class="anchor" aria-hidden="true" id="treasury"></a><a href="#treasury" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Treasury</h2>
+<h3><a class="anchor" aria-hidden="true" id="query-current-epoch"></a><a href="#query-current-epoch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Current Epoch</h3>
+<p>Treasury macroeconomic parameters are updated on a periodic basis each Epoch (currently around 1 week). To check the current epoch number (starting from 0):</p>
+<pre><code class="hljs css language-bash">terracli query treasury current-epoch
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-tax-rate"></a><a href="#query-tax-rate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Tax Rate</h3>
+<p>Terra transactions charge a % fee on each outbound transaction from the sender's wallet. To get the effective stability fee rate for a given epoch, run:</p>
+<pre><code class="hljs css language-bash">terracli query treasury tax-rate &lt;epoch_number&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-tax-cap"></a><a href="#query-tax-cap" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Tax Cap</h3>
+<p>Stability fees are capped at some fixed amount of SDT to avoid penalizing large transactions. To get the current tax cap denominated in a given denomination (micro-units), run:</p>
+<pre><code class="hljs css language-bash">terracli query treasury tax-cap &lt;denom&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-tax-proceeds"></a><a href="#query-tax-proceeds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Tax Proceeds</h3>
+<p>To query the cumulative tax proceeds of a given epoch, run:</p>
+<pre><code class="hljs css language-bash">terracli query treasury tax-proceeds &lt;epoch_number&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-reward-weight"></a><a href="#query-reward-weight" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Reward Weight</h3>
+<p>The Reward Weight is the portion of seigniorage that is designated as ballot rewards for the winners of exchange rate oracle. To query the Reward Weight of a given epoch, run:</p>
+<pre><code class="hljs css language-bash">terracli query treasury reward-weight &lt;epoch_number&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-seigniorage-proceeds"></a><a href="#query-seigniorage-proceeds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Seigniorage Proceeds</h3>
+<p>The treasury measures the amount of Terra seigniorage accumulated over epochs, denominated in units of <code>uluna</code>. To query the seigniorage proceeds of a given epoch, run:</p>
+<pre><code class="hljs css language-bash">terracli query treasury seigniorage-proceeds &lt;epoch_number&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="query-parameters-2"></a><a href="#query-parameters-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Parameters</h3>
+<p>Parameters define high-level settings for the Treasury, described <a href="/docs/dev-spec-treasury#parameters">here</a>. You can get the current values by using:</p>
+<pre><code class="hljs css language-bash">terracli query treasury params
+</code></pre>
+<p>With the above command you will get the values for:</p>
+<ul><li>Tax Rate update policy</li>
+<li>Reward Weight update policy</li>
+<li>Seigniorage Burden Target</li>
+<li>Mining Increment</li>
+<li><code>WindowShort</code> (update parameter)</li>
+<li><code>WindowLong</code> (update parameter)</li>
+<li><code>WindowProbation</code> (update parameter)</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/1/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/node-light-client"><span class="arrow-prev">← </span><span>Light Client Daemon</span></a><a class="docs-next button" href="/docs/node-ledger-nano-support"><span>Ledger Nano Support</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#keys">Keys</a><ul class="toc-headings"><li><a href="#key-representations">Key Representations</a></li><li><a href="#generate-keys">Generate Keys</a></li><li><a href="#generate-multisig-public-keys">Generate Multisig Public Keys</a></li></ul></li><li><a href="#fees">Fees</a><ul class="toc-headings"><li><a href="#fees-gas">Fees &amp; Gas</a></li><li><a href="#fees-taxes-from-columbus-3">Fees &amp; Taxes (From Columbus-3)</a></li></ul></li><li><a href="#account">Account</a><ul class="toc-headings"><li><a href="#get-tokens">Get Tokens</a></li><li><a href="#query-account-balance">Query Account Balance</a></li></ul></li><li><a href="#send-tokens">Send Tokens</a></li><li><a href="#query-transactions">Query Transactions</a><ul class="toc-headings"><li><a href="#matching-a-set-of-tags">Matching a set of tags</a></li><li><a href="#matching-a-transactions-hash">Matching a transaction's hash</a></li></ul></li><li><a href="#slashing">Slashing</a><ul class="toc-headings"><li><a href="#unjailing">Unjailing</a></li><li><a href="#signing-info">Signing Info</a></li><li><a href="#query-parameters">Query Parameters</a></li></ul></li><li><a href="#staking">Staking</a><ul class="toc-headings"><li><a href="#set-up-a-validator">Set up a Validator</a></li><li><a href="#delegate-to-a-validator">Delegate to a Validator</a></li><li><a href="#bond-tokens">Bond Tokens</a></li><li><a href="#unbond-tokens">Unbond Tokens</a></li><li><a href="#redelegate-tokens">Redelegate Tokens</a></li><li><a href="#query-parameters-1">Query Parameters</a></li><li><a href="#query-pool">Query Pool</a></li></ul></li><li><a href="#governance">Governance</a><ul class="toc-headings"><li><a href="#create-a-proposal">Create a Proposal</a></li><li><a href="#query-proposals">Query Proposals</a></li><li><a href="#increase-deposit">Increase Deposit</a></li><li><a href="#query-deposits">Query Deposits</a></li><li><a href="#vote-on-a-proposal">Vote on a Proposal</a></li><li><a href="#query-votes">Query Votes</a></li><li><a href="#query-proposal-tally-results">Query Proposal Tally Results</a></li><li><a href="#query-governance-parameters">Query Governance Parameters</a></li></ul></li><li><a href="#distribution">Distribution</a><ul class="toc-headings"><li><a href="#query-distribution-parameters">Query Distribution Parameters</a></li><li><a href="#query-community-pool-coins">Query Community Pool Coins</a></li><li><a href="#query-outstanding-rewards">Query Outstanding Rewards</a></li><li><a href="#query-validator-commission">Query Validator Commission</a></li><li><a href="#query-validator-slashes">Query Validator Slashes</a></li><li><a href="#query-delegator-rewards">Query Delegator Rewards</a></li><li><a href="#query-all-delegator-rewards">Query All Delegator Rewards</a></li></ul></li><li><a href="#multisig-transactions">Multisig Transactions</a></li><li><a href="#shell-auto-completion-scripts">Shell Auto-completion Scripts</a></li><li><a href="#oracle">Oracle</a><ul class="toc-headings"><li><a href="#submit-an-exchange-rate-vote">Submit an Exchange Rate Vote</a></li><li><a href="#delegate-exchange-rate-voting-rights">Delegate Exchange Rate Voting Rights</a></li></ul></li><li><a href="#market">Market</a><ul class="toc-headings"><li><a href="#swap-currencies">Swap Currencies</a></li><li><a href="#query-swap-currencies">Query Swap Currencies</a></li></ul></li><li><a href="#treasury">Treasury</a><ul class="toc-headings"><li><a href="#query-current-epoch">Query Current Epoch</a></li><li><a href="#query-tax-rate">Query Tax Rate</a></li><li><a href="#query-tax-cap">Query Tax Cap</a></li><li><a href="#query-tax-proceeds">Query Tax Proceeds</a></li><li><a href="#query-reward-weight">Query Reward Weight</a></li><li><a href="#query-seigniorage-proceeds">Query Seigniorage Proceeds</a></li><li><a href="#query-parameters-2">Query Parameters</a></li></ul></li></ul></nav></div><footer class="nav-footer no-print" id="footer"><section class="sitemap"><a href="https://terra.money" class="nav-home"><img src="/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '5957091e293f7b97f2994bde312aed99',
+                indexName: 'terra-project',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en"]}
+              });
+            </script></body></html>

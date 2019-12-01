@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Ledger Nano S Support for Terra · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A Ledger Nano S is a hardware wallet. Hardware wallets are considered very secure for the storage of a user’s private keys in the blockchain world. Your digital assets are safe even when using an infected (or untrusted) PC. Follow these instructions to interact with the Terra blockchain using a Ledger Nano device. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Ledger Nano S Support for Terra · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.wcdc.me/"/><meta property="og:description" content="A Ledger Nano S is a hardware wallet. Hardware wallets are considered very secure for the storage of a user’s private keys in the blockchain world. Your digital assets are safe even when using an infected (or untrusted) PC. Follow these instructions to interact with the Terra blockchain using a Ledger Nano device. "/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:400,500,700&amp;display=swap"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer no-print"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc no-print"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>NODE SOFTWARE</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Overview<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/columbus3">Columbus-3 Mainnet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Terra Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-how-terra-works">How Terra Works</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-devguide">Developer Guide</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">MODULE SPECS</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dev-spec-auth">Auth</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-bank">Bank</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-supply">Supply</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-distribution">Distribution</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-staking">Staking</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-slashing">Slashing</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-oracle">Oracle</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-market">Market</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-treasury">Treasury</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-spec-governance">Governance</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">User Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">NODE SOFTWARE</h4><ul><li class="navListItem"><a class="navItem" href="/docs/node-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/node-users">User Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/node-light-client">Light Client Daemon</a></li><li class="navListItem"><a class="navItem" href="/docs/node-terracli">terracli Reference</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/node-ledger-nano-support">Ledger Nano Support</a></li><li class="navListItem"><a class="navItem" href="/docs/node-production">Production Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/node-join-network">Join a Network</a></li><li class="navListItem"><a class="navItem" href="/docs/node-deploy-testnet">Deploy a Testnet</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Validator Handbook<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/validator-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-faq">Validator FAQ</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">GUIDES</h4><ul><li class="navListItem"><a class="navItem" href="/docs/validator-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-security">Security Best Practices</a></li><li class="navListItem"><a class="navItem" href="/docs/validator-oracle">Exchange Rate Oracle</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Contribute<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/dev-contributing">Contribution guidelines for Terra Core</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-help-translate">Help to translate</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><img class="print-only" src="/img/docs_logo.svg"/><br/><header class="postHeader"><h1 class="postHeaderTitle">Ledger Nano S Support for Terra</h1></header><article><div><span><p>A Ledger Nano S is a hardware wallet. Hardware wallets are considered very secure for the storage of a user’s private keys in the blockchain world. Your digital assets are safe even when using an infected (or untrusted) PC. Follow these instructions to interact with the Terra blockchain using a Ledger Nano device.</p>
+<h2><a class="anchor" aria-hidden="true" id="requirements"></a><a href="#requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements</h2>
+<ul><li>You have <a href="https://support.ledgerwallet.com/hc/en-us/articles/360000613793">initialized your Ledger Nano S</a></li>
+<li>The latest firmware is <a href="https://support.ledger.com/hc/en-us/articles/360002731113-Update-Ledger-Nano-S-firmware">installed</a></li>
+<li>Ledger Live is <a href="https://support.ledger.com/hc/en-us/articles/360006395233-Take-your-first-steps">ready to use</a></li>
+<li>Google Chrome is installed.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<blockquote class="warning"><p>To do this, it is preferable to use a brand new ledger device as there can be only one mnemonic per ledger device.</p>
+<p>If, however, you want to use a ledger that is already initialized with a seed, you can reset it by going in <code>Settings</code>&gt;<code>Device</code>&gt;<code>Reset All</code>.</p>
+<p><strong>Please note that this will wipe out the seed currently stored on the device.</strong>
+<strong>If you have not properly secured the associated mnemonic, you could lose your funds!</strong></p>
+</blockquote>
+<ul><li>Open the <strong>Manager</strong> in Ledger Live.</li>
+<li>Connect and unlock your Ledger Nano S.</li>
+<li>If asked, allow the manager on your device by pressing the right button.</li>
+<li>Find <strong>Terra</strong> in the app catalog.</li>
+<li>Click the Install button of the app.</li>
+<li>An installation window appears.</li>
+<li>Your device will display <strong>Processing…</strong></li>
+<li>The app installation is confirmed.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="setup"></a><a href="#setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup</h2>
+<p>Before we can configure the Ledger Nano S to interact with the Terra blockchain, we need the following:</p>
+<ul><li><a href="/docs/node-users#on-a-ledger-device">Generating new keys or recovering fundraiser keys from a ledger device</a></li>
+<li><a href="/docs/node-users#using-a-ledger-device">Creating an account using a ledger device</a></li>
+<li><a href="/docs/node-users#accessing-the-terra-network">A running <code>terrad</code> instance connected to the network you wish to use.</a></li>
+<li><a href="/docs/node-users#setting-up-terracli">A <code>terracli</code> instance configured to connect to your chosen <code>terrad</code> instance.</a></li>
+</ul>
+<p>Now, you are all set to start sending and receiving transactions on the network.</p>
+<h2><a class="anchor" aria-hidden="true" id="use-the-ledger-with-the-cli"></a><a href="#use-the-ledger-with-the-cli" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use the Ledger with the CLI</h2>
+<blockquote class="info"><p>Your ledger device must be on and the Terra ledger app must be in the foreground to perform the following actions.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="how-to-view-account-balance"></a><a href="#how-to-view-account-balance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to view account balance</h3>
+<p>You can <a href="/docs/node-terracli#query-account-balance">use <code>terracli</code> to view the account balance</a>, using the key created in the above step.</p>
+<h3><a class="anchor" aria-hidden="true" id="how-to-receive-tokens"></a><a href="#how-to-receive-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to receive tokens</h3>
+<p>Run <code>terracli keys show &lt;yourAccountName&gt; -d</code> to see the account address at which to receive tokens. You will be asked to confirm that the intended receiving address (matching <code>&lt;yourAccountName&gt;</code>) matches the account registered on the ledger. If the two addresses match, press the right button to confirm, and offer the address to the sender. If they do not match, press the left button to reject.</p>
+<h3><a class="anchor" aria-hidden="true" id="how-to-send-tokens"></a><a href="#how-to-send-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to send tokens</h3>
+<ol><li>You can <a href="/docs/node-terracli#send-tokens">use <code>terracli</code> to send tokens</a>, using the key created in the above step.</li>
+<li>You will be asked to confirm the details of the transaction. Before confirming, check that the destination address on the Ledger display matches your intended destination address.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="support"></a><a href="#support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Support</h2>
+<p>Please speak to us on our <a href="https://discord.gg/a4tqbt">public discord group</a> to drop us a line if you run into problems in setup or usage of the Ledger device.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/1/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/node-terracli"><span class="arrow-prev">← </span><span>terracli Reference</span></a><a class="docs-next button" href="/docs/node-production"><span>Production Settings</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#requirements">Requirements</a></li><li><a href="#installation">Installation</a></li><li><a href="#setup">Setup</a></li><li><a href="#use-the-ledger-with-the-cli">Use the Ledger with the CLI</a><ul class="toc-headings"><li><a href="#how-to-view-account-balance">How to view account balance</a></li><li><a href="#how-to-receive-tokens">How to receive tokens</a></li><li><a href="#how-to-send-tokens">How to send tokens</a></li></ul></li><li><a href="#support">Support</a></li></ul></nav></div><footer class="nav-footer no-print" id="footer"><section class="sitemap"><a href="https://terra.money" class="nav-home"><img src="/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '5957091e293f7b97f2994bde312aed99',
+                indexName: 'terra-project',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en"]}
+              });
+            </script></body></html>

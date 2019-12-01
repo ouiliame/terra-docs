@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Participate in Governance · Terra Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Governance is the process through which participants within the Terra network can effect change for the protocol, by arriving at consensus. Software upgrades and blockchain parameters can be automatically placed in effect through proposals. Other issues like large directional changes or decisions requiring human involvement can be also be voted on, through text proposals."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Participate in Governance · Terra Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.wcdc.me/"/><meta property="og:description" content="Governance is the process through which participants within the Terra network can effect change for the protocol, by arriving at consensus. Software upgrades and blockchain parameters can be automatically placed in effect through proposals. Other issues like large directional changes or decisions requiring human involvement can be also be voted on, through text proposals."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:400,500,700&amp;display=swap"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer no-print"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docs_logo.svg" alt="Terra Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://s3.ap-northeast-2.amazonaws.com/terra.money.home/static/Terra_White_paper.pdf" target="_blank">Whitepaper</a></li><li class=""><a href="https://agora.terra.money/" target="_blank">Agora</a></li><li class=""><a href="https://github.com/terra-project/core" target="_blank">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><img class="print-only" src="/img/docs_logo.svg"/><br/><header class="postHeader"><h1 class="postHeaderTitle">Participate in Governance</h1></header><article><div><span><p>Governance is the process through which participants within the Terra network can effect change for the protocol, by arriving at consensus. Software upgrades and blockchain parameters can be automatically placed in effect through proposals. Other issues like large directional changes or decisions requiring human involvement can be also be voted on, through text proposals.</p>
+<p>Proposals are submitted on the network through creating a proposal, depositing some Luna tokens, and</p>
+<p>Some considerations about the voting process:</p>
+<ul><li><p>Voting is done by holders of bonded LUNA on a 1 LUNA = 1 vote basis</p></li>
+<li><p>Delegators inherit the vote of their validator if they don't vote</p></li>
+<li><p>Votes are tallied at the end of the voting period (2 weeks on mainnet) where
+each address can vote multiple times to update its <code>Option</code> value (paying the transaction fee each time),
+only the most recently cast vote will count as valid</p></li>
+<li><p>Voters can choose between options <code>Yes</code>, <code>No</code>, <code>NoWithVeto</code> and <code>Abstain</code></p></li>
+<li><p>At the end of the voting period, a proposal is accepted if:</p>
+<ul><li><p><code>(YesVotes / (YesVotes+NoVotes+NoWithVetoVotes)) &gt; threshold(1/2)</code></p></li>
+<li><p><code>(NoWithVetoVotes / (YesVotes+NoVotes+NoWithVetoVotes)) &lt; veto(1/3)</code></p></li>
+<li><p><code>((YesVotes+NoVotes+NoWithVetoVotes) / totalBondedStake) &gt;= quorum(1/3)</code></p></li>
+</ul></li>
+</ul>
+<p>For more information about the governance process and how it works, please check
+out the <a href="/docs/dev-spec-governance">Governance module specification</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="create-a-governance-proposal"></a><a href="#create-a-governance-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Governance Proposal</h3>
+<p>In order to create a governance proposal, you must submit an initial deposit
+along with a title and description. Various modules outside of governance may
+implement their own proposal types and handlers (eg. parameter changes), where
+the governance module itself supports <code>Text</code> proposals. Any module
+outside of governance has it's command mounted on top of <code>submit-proposal</code>.</p>
+<p>To submit a <code>Text</code> proposal:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal \
+  --title=&lt;title&gt; \
+  --description=&lt;description&gt; \
+  --<span class="hljs-built_in">type</span>=<span class="hljs-string">"Text"</span> \
+  --deposit=<span class="hljs-string">"1000000uluna"</span> \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>You may also provide the proposal directly through the <code>--proposal</code> flag which
+points to a JSON file containing the proposal.</p>
+<p>To submit a parameter change proposal, you must provide a proposal file as its
+contents are less friendly to CLI input:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal param-change &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Param Change"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Update max validators"</span>,
+  <span class="hljs-attr">"changes"</span>: [
+    {
+      <span class="hljs-attr">"subspace"</span>: <span class="hljs-string">"staking"</span>,
+      <span class="hljs-attr">"key"</span>: <span class="hljs-string">"MaxValidators"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-number">105</span>
+    }
+  ],
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"stake"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000000"</span>
+    }
+  ]
+}
+</code></pre>
+<blockquote class="warning"><p>Currently parameter changes are <em>evaluated</em> but not <em>validated</em>, so it is very important
+that any <code>value</code> change is valid (ie. correct type and within bounds) for its
+respective parameter, eg. <code>MaxValidators</code> should be an integer and not a decimal.</p>
+<p>Proper vetting of a parameter change proposal should prevent this from happening
+(no deposits should occur during the governance process), but it should be noted
+regardless.</p>
+</blockquote>
+<p>To submit a community pool spend proposal, you must provide a proposal file as its
+contents are less friendly to CLI input:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal community-pool-spend &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Community Pool Spend"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Pay me some Lunas!"</span>,
+  <span class="hljs-attr">"recipient"</span>: <span class="hljs-string">"terra1s5afhd6gxevu37mkqcvvsj8qeylhn0rzn7cdaq"</span>,
+  <span class="hljs-attr">"amount"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ],
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ]
+}
+</code></pre>
+<p>To submit a tax rate update proposal, you must provide a proposal file as its
+contents are less friendly to CLI input:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal tax-rate-update &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Update Tax-Rate"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Let's update the tax-rate to 1.5%"</span>,
+  <span class="hljs-attr">"tax_rate"</span>: <span class="hljs-string">"0.015"</span>,
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ]
+}
+</code></pre>
+<p>To submit a reward weight update proposal, you must provide a proposal file as its
+contents are less friendly to CLI input:</p>
+<pre><code class="hljs css language-bash">terracli tx gov submit-proposal reward-weight-update &lt;path/to/proposal.json&gt; \
+  --from=&lt;name&gt; \
+  --chain-id=&lt;chain_id&gt;
+</code></pre>
+<p>Where <code>proposal.json</code> contains the following:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Update Reward Weight"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Let's update reward weight to 1.5%"</span>,
+  <span class="hljs-attr">"reward_weight"</span>: <span class="hljs-string">"0.015"</span>,
+  <span class="hljs-attr">"deposit"</span>: [
+    {
+      <span class="hljs-attr">"denom"</span>: <span class="hljs-string">"uluna"</span>,
+      <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"10000"</span>
+    }
+  ]
+}
+</code></pre>
+<blockquote class="important"><p>The <code>SoftwareUpgrade</code> is currently not supported as it's not implemented and currently does not differ from the semantics of a <code>Text</code> proposal.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/30/2019</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer no-print" id="footer"><section class="sitemap"><a href="https://terra.money" class="nav-home"><img src="/img/inverted_logo.svg" alt="Terra Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/terra-project/core" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/terra_money" class="twitter-follow-button">Follow @terra_money</a></div></div></section><section class="copyright">© 2019 <b>Terra</b></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '5957091e293f7b97f2994bde312aed99',
+                indexName: 'terra-project',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en"]}
+              });
+            </script></body></html>
